@@ -8,8 +8,7 @@ public class Ennemi {
     int pv;
     int degat;
     int prix;
-    
-    public Ennemi (String nom, int vitesse, int pv, int degat, int prix){
+    public  Ennemi (String nom, int vitesse, int pv, int degat, int prix){
         this.nom = nom;
         this.vitesse = vitesse;
         this.pv = pv;
