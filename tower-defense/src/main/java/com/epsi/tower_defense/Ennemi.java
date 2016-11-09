@@ -1,6 +1,7 @@
 /**
  * Created by Jacques on 09/11/2016.
  */
+package com.epsi.tower_defense;
 public class Ennemi {
     String nom;
     int vitesse;
