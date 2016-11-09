@@ -18,6 +18,6 @@ public class Tour {
         this.degat=degat;
         this.prix=prix;
         this.niveau=niveau;
-        
+        //Test Paul
     }
 }
