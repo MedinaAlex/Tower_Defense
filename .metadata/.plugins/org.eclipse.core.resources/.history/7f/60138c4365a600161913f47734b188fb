@@ -1,0 +1,12 @@
+package com.epsi.tower_defense;
+
+import java.io.File;
+
+public class App {
+	public static void main(String[] args) {
+		File f = new File("ressources/terrainTest.json");
+		System.out.println(f.exists());
+		
+		Plateau plateau = new Plateau("ressources/terrainTest.json");
+	}
+}
