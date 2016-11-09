@@ -1,1 +1,39 @@
 2016-11-02 15:02:15,280 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2016-11-09 10:11:23,311 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2016-11-09 10:42:12,044 [Worker-27] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' D:\Ecole\Github\Tower_Defense\tower-defense\pom.xml
+2016-11-09 10:42:13,019 [Worker-27] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.epsi:tower-defense:0.0.1-SNAPSHOT @ D:\Ecole\Github\Tower_Defense\tower-defense\pom.xml.
+2016-11-09 10:42:13,354 [Worker-27] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /tower-defense/src/main/java
+2016-11-09 10:42:13,357 [Worker-27] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /tower-defense/src/test/java
+2016-11-09 10:42:13,406 [Worker-27] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2016-11-09 10:42:13,820 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:42:13,820 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 10:42:13,822 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:42:13,822 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 10:43:01,640 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:43:01,640 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 10:43:01,642 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:43:01,643 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 10:43:06,094 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:43:06,094 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 10:43:06,095 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:43:06,095 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 10:43:39,854 [Worker-27] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.epsi:tower-defense:0.0.1-SNAPSHOT @ D:\Ecole\Github\Tower_Defense\tower-defense\pom.xml.
+2016-11-09 10:43:40,372 [Worker-27] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/json/json/20160810/json-20160810.pom
+2016-11-09 10:43:40,429 [Worker-27] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/json/json/20160810/json-20160810.pom
+2016-11-09 10:43:40,487 [Worker-27] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom
+2016-11-09 10:43:40,550 [Worker-27] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom
+2016-11-09 10:43:40,618 [Worker-27] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/json/json/20160810/json-20160810.jar
+2016-11-09 10:43:40,709 [Worker-27] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/json/json/20160810/json-20160810.jar
+2016-11-09 10:43:41,201 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:43:41,201 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 10:43:41,203 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:43:41,203 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 10:43:42,310 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:43:42,311 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 10:43:42,312 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:43:42,312 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 10:43:44,696 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.epsi:tower-defense:0.0.1-SNAPSHOT @ D:\Ecole\Github\Tower_Defense\tower-defense\pom.xml.
+2016-11-09 10:43:44,826 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:43:44,827 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 10:43:44,829 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 10:43:44,829 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources

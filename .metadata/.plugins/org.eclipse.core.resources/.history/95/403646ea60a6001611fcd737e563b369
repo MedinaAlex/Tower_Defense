@@ -1,0 +1,12 @@
+
+public class Plateau {
+	
+	Case[][] terrain;
+	
+	public Plateau(String terrain) {
+		
+		
+	
+	
+	}
+}
