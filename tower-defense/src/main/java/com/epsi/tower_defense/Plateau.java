@@ -4,11 +4,13 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Plateau {
 	
-	Case[][] terrain;
+	ArrayList<Case> terrain=new ArrayList<>();
+	ArrayList<Case> chemin=new ArrayList<>();
 	
 	int taille;
 	
@@ -29,7 +31,7 @@ public class Plateau {
 			
 			//Map carré
 			taille = (int) Math.sqrt(map.length());
-			int i =0 , j = 0;
+			int x =0 , y = 0;
 			terrain = new Case[taille][taille];
 			
 			for(char s: map.toCharArray()){
@@ -37,30 +39,30 @@ public class Plateau {
 				Case c;
 				switch (s) {
 					case '0':
-						c= new Case(false,false,false);
+						c= new Case(false,false,false,x,y);
 						break;
 						
 					case '1': 
-						 c = new Case(true, false, false);
+						 c = new Case(true, false, false,x,y);
 						break;
 						
 					case '3':
-						 c = new Case(true, true, false);
+						 c = new Case(true, true, false,x,y);
 						break;
 						
 					case '4':
-						 c = new Case(true, false, true);
+						 c = new Case(true, false, true,x,y);
 						break;
 						
 					default:
 						throw new Exception("Case non valide");
 				}
 				
-				terrain[i][j] = c;
-				j++;
-				if(j == taille){
-					i++;
-					j = 0;
+				terrain[x][y] = c;
+				y++;
+				if(y == taille){
+					x++;
+					y = 0;
 				}
 			}
 		}		
@@ -68,6 +70,22 @@ public class Plateau {
 			System.out.println(e.toString());
 		}
 	}
+
+	public int[] coorDepart(){
+		int tableauEntier[] = {1,0};
+		return tableauEntier;
+	}
+	public int[] coorArrivee(){
+		int tableauEntier[] = {4,3};
+		return tableauEntier;
+	}
+
+	public void determinerCase(){
+		for(int j = 0; j < taille; j++;){
+			for(int i = 0; ){
+		}
+	}
+
 
 	@Override
 	public String toString() {
