@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import junit.framework.Assert;
+
 public class Plateau {
 	
 	ArrayList<Case> terrain=new ArrayList<>();
@@ -76,18 +78,28 @@ public class Plateau {
 	}
 	
 	public void run(){
+		int tour = 1;
 		while(pv > 0){
 			deplacerEnnemis();
+			
+			tour++;
 		}
-		System.out.println("Vous avez perdu");
+		System.out.println("Vous avez perdu après " + tour + "tours");
+	}
+	
+	public void attaquer(){
+		for(Case actuelle: terrain){
+			if(actuelle.getTour() != null){
+				// TODO
+			}
+		}
 	}
 	
 	public void deplacerEnnemis(){
-		
+		System.out.println(chemin);
 		for(int i = chemin.size()-1; i > 0; i--){
 			chemin.get(i).setListEnnemis(chemin.get(i-1).getListEnnemis());
 		}
-		System.out.println(chemin);
 		chemin.get(0).listEnnemis = new ArrayList<Ennemi>();
 		verifierArrive();
 	}
@@ -112,7 +124,7 @@ public class Plateau {
 		
 		while(chemin.size() > 1 ){
 			Case actuelle = ordonnee.get(ordonnee.size()-1);			
-			ArrayList<Case> voisins = getCaseVoisin(actuelle);
+			ArrayList<Case> voisins = getCasesVoisine(actuelle);
 			
 			if(voisins.size() == 2){
 				System.out.println(voisins.get(0));
@@ -132,16 +144,16 @@ public class Plateau {
 		this.chemin = ordonnee;
 	}
 	
-	private ArrayList<Case> getCaseVoisin(Case ennemi){
-		int x = ennemi.getX();
-		int y = ennemi.getY();
+	private ArrayList<Case> getCasesVoisine(Case _case){
+		int x = _case.getX();
+		int y = _case.getY();
 		ArrayList<Case> cheminVoisins = new ArrayList<>();
 		
-		for(Case c : chemin){
-			if ((c.getX() == x && (c.getY() == y-1 || c.getY() == y+1)) 
-			 || (c.getY() == y && (c.getX() == x-1 || c.getX() == x+1)))
+		for(Case actuelle : chemin){
+			if ((actuelle.getX() == x && (actuelle.getY() == y-1 || actuelle.getY() == y+1)) 
+			 || (actuelle.getY() == y && (actuelle.getX() == x-1 || actuelle.getX() == x+1)))
 			{
-				cheminVoisins.add(c);
+				cheminVoisins.add(actuelle);
 			}
 		}
 		

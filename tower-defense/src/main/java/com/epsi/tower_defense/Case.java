@@ -22,7 +22,7 @@ public class Case {
 
 	@Override
 	public String toString() {
-		return "Case [X =" + x +", Y = " + y + "ennemi size = " +listEnnemis.size()+ "]";
+		return "Case [X = " + x +", Y = " + y + ", ennemi size = " +listEnnemis.size()+ "]";
 	}
 
 	public ArrayList<Ennemi> getListEnnemis() {
