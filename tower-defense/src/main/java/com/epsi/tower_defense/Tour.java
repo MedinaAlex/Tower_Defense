@@ -1,8 +1,5 @@
 package com.epsi.tower_defense;
 
-/**
- * Created by Jacques on 09/11/2016.
- */
 public class Tour {
     String nom;
     int portee;
