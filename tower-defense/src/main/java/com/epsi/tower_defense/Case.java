@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Case {
     boolean chemin = false;
-    ArrayList<Ennemi> listEnnemis = new ArrayList<Ennemi>();
+    ArrayList<Ennemi> listEnnemis = new ArrayList<>();
     Tour tour = null;
     boolean depart = false;
     boolean arrive = false;
@@ -13,4 +13,13 @@ public class Case {
         this.depart = depart;
         this.arrive = arrive;
     }
+
+	@Override
+	public String toString() {
+		return "Case [chemin=" + chemin + ", listEnnemis=" + listEnnemis + ", tour=" + tour + ", depart=" + depart
+				+ ", arrive=" + arrive + "]";
+	}
+    
+    
+    
 }

@@ -1,10 +1,10 @@
 package com.epsi.tower_defense;
 
-import java.io.File;
+import java.io.IOException;
 
 public class App {
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) throws IOException {
 		Plateau plateau = new Plateau("ressources/terrainTest.json");
+		System.out.println(plateau);
 	}
 }

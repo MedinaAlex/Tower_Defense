@@ -1,0 +1,78 @@
+package com.epsi.tower_defense;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
+public class Plateau {
+	
+	Case[][] terrain;
+	
+	int taille;
+	
+	public Plateau(String path) {
+
+		
+		//lecture du fichier texte	
+		try{
+			InputStream ips=new FileInputStream(path); 
+			InputStreamReader ipsr=new InputStreamReader(ips);
+			BufferedReader br=new BufferedReader(ipsr);
+			String ligne, map = "";
+			while ((ligne=br.readLine())!=null){
+				map += ligne;
+			}
+			
+			br.close();
+			
+			//Map carré
+			taille = (int) Math.sqrt(map.length());
+			int i =0 , j = 0;
+			terrain = new Case[taille][taille];
+			
+			for(char s: map.toCharArray()){
+				
+				Case c = null;
+				switch (s) {
+					case '0':
+						c= new Case(false,false,false);
+						break;
+						
+					case '1': 
+						 c = new Case(true, false, false);
+						break;
+						
+					case '3':
+						 c = new Case(true, true, false);
+						break;
+						
+					case '4':
+						 c = new Case(true, false, true);
+						break;
+						
+					default:
+						throw new Exception("Case non valide");
+				}
+				
+				terrain[i][j] = c;
+				j++;
+				if(j == taille){
+					i++;
+					j = 0;
+				}
+			}
+		}		
+		catch (Exception e){
+			System.out.println(e.toString());
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Plateau [terrain=" + Arrays.toString(terrain) + ", taille=" + taille + "]";
+	}
+	
+	
+}

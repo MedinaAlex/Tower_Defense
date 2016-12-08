@@ -194,3 +194,413 @@
 2016-11-09 11:38:21,008 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
 2016-11-09 11:38:21,008 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2016-11-09 11:38:21,008 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:39:49,071 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:39:49,071 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:39:49,072 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:39:49,072 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:40:17,150 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:40:17,150 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:40:17,151 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:40:17,151 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:40:20,414 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:40:20,415 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:40:20,415 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:40:20,415 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:40:53,680 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:40:53,681 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:40:53,681 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:40:53,682 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:40:56,123 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:40:56,123 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:40:56,124 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:40:56,124 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:41:22,592 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:41:22,592 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:41:22,593 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:41:22,594 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:41:30,429 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:41:30,429 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:41:30,431 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:41:30,432 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:42:17,726 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:42:17,726 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:42:17,727 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:42:17,728 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:44:10,317 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:44:10,317 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:44:10,318 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:44:10,318 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:44:24,597 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:44:24,597 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:44:24,597 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:44:24,598 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:44:35,943 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:44:35,943 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:44:35,945 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:44:35,946 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:44:40,665 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:44:40,665 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:44:40,666 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:44:40,666 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:45:02,419 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:45:02,419 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:45:02,420 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:45:02,420 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:45:05,287 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:45:05,287 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:45:05,287 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:45:05,287 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:45:07,999 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:45:07,999 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:45:08,000 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:45:08,000 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 11:45:09,499 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:45:09,499 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 11:45:09,500 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 11:45:09,500 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:34:26,772 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:34:26,773 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:34:26,774 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:34:26,774 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:34:27,806 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:34:27,807 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:34:27,807 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:34:27,807 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:34:43,667 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:34:43,667 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:34:43,669 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:34:43,669 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:34:58,741 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:34:58,741 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:34:58,743 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:34:58,743 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:35:05,805 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:35:05,805 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:35:05,807 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:35:05,808 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:36:02,334 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:36:02,334 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:36:02,336 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:36:02,336 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:36:32,724 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:36:32,724 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:36:32,725 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:36:32,725 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:36:37,641 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:36:37,641 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:36:37,642 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:36:37,643 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:37:28,089 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:37:28,090 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:37:28,091 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:37:28,091 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:37:30,496 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:37:30,497 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:37:30,497 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:37:30,498 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:38:04,920 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:38:04,921 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:38:04,921 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:38:04,921 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:38:36,128 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:38:36,128 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:38:36,129 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:38:36,130 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:38:41,047 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:38:41,047 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:38:41,047 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:38:41,047 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:38:45,023 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:38:45,023 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:38:45,024 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:38:45,024 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:39:37,599 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:39:37,599 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:39:37,600 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:39:37,600 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:40:12,047 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:40:12,047 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:40:12,048 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:40:12,048 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:44:34,481 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:44:34,481 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:44:34,482 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:44:34,482 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:45:27,383 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:45:27,383 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:45:27,384 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:45:27,384 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:46:02,273 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:46:02,273 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:46:02,273 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:46:02,274 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:46:04,409 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:46:04,410 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:46:04,411 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:46:04,411 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-11-09 15:47:45,882 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:47:45,882 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-11-09 15:47:45,883 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-09 15:47:45,883 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 16:05:11,811 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2016-12-07 17:12:06,951 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:12:06,953 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:12:06,956 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:12:06,957 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:12:27,510 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:12:27,510 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:12:27,510 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:12:27,511 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:13:42,944 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:13:42,945 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:13:42,946 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:13:42,946 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:14:08,461 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:14:08,462 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:14:08,463 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:14:08,463 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:15:12,791 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:15:12,792 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:15:12,794 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:15:12,795 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:15:19,777 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:15:19,777 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:15:19,778 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:15:19,778 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:15:24,310 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:15:24,310 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:15:24,311 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:15:24,311 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:15:32,725 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:15:32,725 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:15:32,726 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:15:32,726 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:15:38,189 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:15:38,190 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:15:38,190 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:15:38,191 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:16:35,746 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:16:35,747 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:16:35,747 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:16:35,747 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:16:45,076 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:16:45,076 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:16:45,077 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:16:45,078 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:17:04,182 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:17:04,182 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:17:04,183 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:17:04,183 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:17:58,173 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:17:58,174 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:17:58,175 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:17:58,175 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:19:51,952 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:19:51,952 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:19:51,953 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:19:51,953 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:20:33,300 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:20:33,300 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:20:33,301 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:20:33,301 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:20:51,967 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:20:51,967 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:20:51,969 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:20:51,969 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:23:05,143 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:23:05,143 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:23:05,143 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:23:05,144 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:23:17,074 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:23:17,074 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:23:17,075 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:23:17,075 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:24:16,340 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:24:16,341 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:24:16,342 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:24:16,342 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:25:26,442 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:25:26,443 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:25:26,443 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:25:26,443 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:25:32,535 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:25:32,535 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:25:32,536 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:25:32,536 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:25:34,827 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:25:34,827 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:25:34,828 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:25:34,828 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:26:44,748 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:26:44,748 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:26:44,748 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:26:44,749 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:26:48,567 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:26:48,567 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:26:48,568 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:26:48,568 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:26:53,563 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:26:53,564 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:26:53,565 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:26:53,565 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:28:27,778 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:28:27,778 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:28:27,779 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:28:27,779 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:28:49,526 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:28:49,526 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:28:49,527 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:28:49,527 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:28:58,785 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:28:58,785 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:28:58,786 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:28:58,786 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:29:12,110 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:29:12,110 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:29:12,111 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:29:12,111 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:29:26,002 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:29:26,002 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:29:26,004 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:29:26,004 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:29:41,302 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:29:41,302 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:29:41,303 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:29:41,303 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-07 17:30:01,392 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:30:01,393 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-07 17:30:01,393 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-07 17:30:01,394 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:02:46,760 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2016-12-08 08:07:17,150 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:07:17,150 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:07:17,153 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:07:17,154 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:08:08,963 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:08:08,963 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:08:08,966 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:08:08,966 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:08:21,557 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:08:21,558 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:08:21,559 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:08:21,559 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:08:58,174 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:08:58,174 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:08:58,177 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:08:58,178 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:10:23,074 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:10:23,075 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:10:23,075 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:10:23,076 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:11:48,714 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:11:48,715 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:11:48,717 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:11:48,717 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:12:00,851 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:12:00,851 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:12:00,852 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:12:00,852 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:12:20,930 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:12:20,930 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:12:20,932 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:12:20,932 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:12:28,723 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:12:28,723 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:12:28,724 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:12:28,724 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:12:47,851 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:12:47,852 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:12:47,853 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:12:47,853 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:13:40,268 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:13:40,268 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:13:40,269 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:13:40,269 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:13:44,169 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:13:44,170 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:13:44,171 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:13:44,171 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:13:48,227 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:13:48,227 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:13:48,228 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:13:48,228 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:14:05,720 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:14:05,721 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:14:05,722 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:14:05,722 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:14:16,321 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:14:16,321 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:14:16,322 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:14:16,323 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:16:18,541 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:18,541 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:16:18,543 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:18,543 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:16:28,757 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:28,757 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:16:28,758 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:28,758 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:16:37,159 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:37,159 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:16:37,160 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:37,160 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:16:47,037 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:47,037 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:16:47,038 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:47,039 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:16:51,130 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:51,131 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:16:51,132 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:51,132 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:16:57,611 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:57,611 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:16:57,612 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:16:57,612 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:17:17,225 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:17:17,225 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:17:17,226 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:17:17,226 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:17:41,958 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:17:41,959 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:17:41,959 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:17:41,960 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:17:47,096 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:17:47,096 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:17:47,097 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:17:47,097 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:17:56,332 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:17:56,332 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:17:56,333 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:17:56,333 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:18:04,352 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:18:04,352 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:18:04,353 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:18:04,353 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:18:12,483 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:18:12,484 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:18:12,484 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:18:12,485 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:18:39,924 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:18:39,924 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:18:39,925 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:18:39,925 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:20:04,184 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:20:04,184 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:20:04,185 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:20:04,185 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:21:05,894 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:21:05,895 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:21:05,896 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:21:05,896 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:21:53,275 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:21:53,275 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:21:53,275 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:21:53,276 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:22:20,617 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:22:20,617 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:22:20,618 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:22:20,618 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources
+2016-12-08 08:22:29,639 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:22:29,640 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\main\resources
+2016-12-08 08:22:29,641 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-12-08 08:22:29,641 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Ecole\Github\Tower_Defense\tower-defense\src\test\resources

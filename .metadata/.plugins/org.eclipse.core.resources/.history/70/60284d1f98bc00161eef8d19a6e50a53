@@ -1,0 +1,35 @@
+package com.epsi.tower_defense;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class Plateau {
+	
+	Case[][] terrain;
+	
+	public Plateau(String path) {
+
+		
+		//lecture du fichier texte	
+		try{
+			InputStream ips=new FileInputStream(path); 
+			InputStreamReader ipsr=new InputStreamReader(ips);
+			BufferedReader br=new BufferedReader(ipsr);
+			String ligne;
+			while ((ligne=br.readLine())!=null){
+				char[] s = ligne.toCharArray();
+				String map = new String(s);
+				for (int i = 0; i < s.length; i++) {
+					System.out.println(s[i]);
+				}
+				System.out.println("map --> " + map);
+			}
+			br.close(); 
+		}		
+		catch (Exception e){
+			System.out.println(e.toString());
+		}
+	}
+}

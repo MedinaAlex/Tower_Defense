@@ -1,0 +1,20 @@
+package com.epsi.tower_defense;
+
+import java.io.FileReader;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class Plateau {
+	
+	//Case[][] terrain;
+	
+	public Plateau(String path) {
+		
+		FileReader f = new FileReader(path);
+		System.out.println(f.read());
+		
+
+		
+	}
+}
