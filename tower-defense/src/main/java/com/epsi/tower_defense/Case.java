@@ -7,6 +7,8 @@ public class Case {
     Tour tour = null;
     boolean depart = false;
     boolean arrive = false;
+    Case suivante;
+    Case precedente;
     int x;
     int y;
 
@@ -20,8 +22,7 @@ public class Case {
 
 	@Override
 	public String toString() {
-		return "Case [chemin=" + chemin + ", listEnnemis=" + listEnnemis + ", tour=" + tour + ", depart=" + depart
-				+ ", arrive=" + arrive + "]";
+		return "Case [X =" + x +", Y = " + y + "ennemi size = " +listEnnemis.size()+ "]";
 	}
 
 	public ArrayList<Ennemi> getListEnnemis() {
