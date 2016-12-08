@@ -32,38 +32,37 @@ public class Plateau {
 			//Map carré
 			taille = (int) Math.sqrt(map.length());
 			int x =0 , y = 0;
-			terrain = new Case[taille][taille];
+			//terrain = new Case[taille][taille];
 			
 			for(char s: map.toCharArray()){
 				
 				Case c;
 				switch (s) {
 					case '0':
-						c= new Case(false,false,false,x,y);
+						c= new Case(x,y,false,false,false);
+						terrain.add(c);
 						break;
 						
 					case '1': 
-						 c = new Case(true, false, false,x,y);
+						 c = new Case(x,y,true, false, false);
+						chemin.add(c);
 						break;
 						
 					case '3':
-						 c = new Case(true, true, false,x,y);
+						 c = new Case(x,y,true, true, false);
+						chemin.add(c);
 						break;
 						
 					case '4':
-						 c = new Case(true, false, true,x,y);
+						 c = new Case(x,y,true, false, true);
+						chemin.add(c);
 						break;
 						
 					default:
 						throw new Exception("Case non valide");
 				}
 				
-				terrain[x][y] = c;
-				y++;
-				if(y == taille){
-					x++;
-					y = 0;
-				}
+
 			}
 		}		
 		catch (Exception e){
@@ -81,15 +80,15 @@ public class Plateau {
 	}
 
 	public void determinerCase(){
-		for(int j = 0; j < taille; j++;){
+		/*for(int j = 0; j < taille; j++;){
 			for(int i = 0; ){
-		}
+		}*/
 	}
 
 
 	@Override
 	public String toString() {
-		return "Plateau [terrain=" + Arrays.toString(terrain) + ", taille=" + taille + "]";
+		return "Plateau [terrain=" + terrain +", Chemin=" + chemin + ", taille=" + taille + "]";
 	}
 	
 	
