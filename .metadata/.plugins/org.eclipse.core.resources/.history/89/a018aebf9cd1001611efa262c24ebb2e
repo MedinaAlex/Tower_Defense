@@ -1,0 +1,162 @@
+package com.epsi.tower_defense;
+import java.util.ArrayList;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Case.
+ */
+public class Case {
+    
+    /** The chemin. */
+    boolean chemin = false;
+    
+    /** The list ennemis. */
+    ArrayList<Ennemi> listEnnemis = new ArrayList<>();
+    
+    /** The tour. */
+    Tour tour = null;
+    
+    /** The depart. */
+    boolean depart = false;
+    
+    /** The arrive. */
+    boolean arrive = false;
+    
+    /** The suivante. */
+    Case suivante;
+    
+    /** The precedente. */
+    Case precedente;
+    
+    /** The x. */
+    int x;
+    
+    /** The y. */
+    int y;
+
+    /**
+     * Instantiates a new case.
+     *
+     * @param x the x
+     * @param y the y
+     * @param chemin the chemin
+     * @param depart the depart
+     * @param arrive the arrive
+     */
+    public Case (int x, int y, boolean chemin, boolean depart, boolean arrive){
+    	this.x = x;
+    	this.y = y;
+        this.chemin = chemin;
+        this.depart = depart;
+        this.arrive = arrive;
+    }
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Case [X = " + x +", Y = " + y + ", ennemi size = " +listEnnemis.size()+ "]";
+	}
+
+	/**
+	 * Gets the list ennemis.
+	 *
+	 * @return the list ennemis
+	 */
+	public ArrayList<Ennemi> getListEnnemis() {
+		return listEnnemis;
+	}
+
+	/**
+	 * Sets the list ennemis.
+	 *
+	 * @param listEnnemis the new list ennemis
+	 */
+	public void setListEnnemis(ArrayList<Ennemi> listEnnemis) {
+		this.listEnnemis = listEnnemis;
+	}
+
+	/**
+	 * Gets the tour.
+	 *
+	 * @return the tour
+	 */
+	public Tour getTour() {
+		return tour;
+	}
+
+	/**
+	 * Sets the tour.
+	 *
+	 * @param tour the new tour
+	 */
+	public void setTour(Tour tour) {
+		this.tour = tour;
+	}
+
+	/**
+	 * Gets the x.
+	 *
+	 * @return the x
+	 */
+	public int getX() {
+		return x;
+	}
+
+	/**
+	 * Sets the x.
+	 *
+	 * @param x the new x
+	 */
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	/**
+	 * Gets the y.
+	 *
+	 * @return the y
+	 */
+	public int getY() {
+		return y;
+	}
+
+	/**
+	 * Sets the y.
+	 *
+	 * @param y the new y
+	 */
+	public void setY(int y) {
+		this.y = y;
+	}
+
+	/**
+	 * Checks if is chemin.
+	 *
+	 * @return true, if is chemin
+	 */
+	public boolean isChemin() {
+		return chemin;
+	}
+
+	/**
+	 * Checks if is depart.
+	 *
+	 * @return true, if is depart
+	 */
+	public boolean isDepart() {
+		return depart;
+	}
+
+	/**
+	 * Checks if is arrive.
+	 *
+	 * @return true, if is arrive
+	 */
+	public boolean isArrive() {
+		return arrive;
+	}
+	
+	
+}

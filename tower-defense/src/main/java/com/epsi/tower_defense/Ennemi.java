@@ -1,15 +1,33 @@
-/**
- * Created by Jacques on 09/11/2016.
- */
 package com.epsi.tower_defense;
+
+/**
+ * Classe Ennemi
+ *
+ */
 public class Ennemi {
+	/** Le nom */
     String nom;
+    
+    /** la vitesse */
     int vitesse;
+    
+    /** les pv */
     int pv;
+    
+    /** les dégats */
     int degat;
+    
+    /** l'argent gagné lorsque l'ennemi est tué */
     int prix;
    
-    
+    /**
+     * Constructeur d'un ennemi
+     * @param nom son nom
+     * @param vitesse sa vitesse
+     * @param pv ses pv
+     * @param degat ses degats
+     * @param prix son prix
+     */
     public Ennemi (String nom, int vitesse, int pv, int degat, int prix){
         this.nom = nom;
         this.vitesse = vitesse;
@@ -20,12 +38,14 @@ public class Ennemi {
     }
     
 
-    
-    public void perdrePV(int degat){
+    /**
+     * Faire perdre de la vie à un ennemi et renvoie un boolean pour savoir si l'ennemi a encore de la vie
+     * @param degat
+     * @return True si l'ennemi doit mourir
+     */
+    public Boolean perdrePV(int degat){
     	this.pv -= degat;
-    }
-    
-    public boolean verifierEnVie(){
     	return pv <= 0;
-    }    
+    }
+      
 }

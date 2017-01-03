@@ -4,19 +4,38 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Timer;
+import java.util.concurrent.TimeUnit;
 
-import junit.framework.Assert;
+import javax.swing.plaf.SliderUI;
 
+/**
+ * Classe Plateau
+ *
+ */
 public class Plateau {
+	/** terrain de jeu */
+	ArrayList<Case> terrain = new ArrayList<>();
 	
-	ArrayList<Case> terrain=new ArrayList<>();
-	ArrayList<Case> chemin=new ArrayList<>();
+	/** liste des chemins */
+	ArrayList<Case> casesChemin = new ArrayList<>();
 	
+	/** taille du terrain */
 	int taille;
 	
+	/** pv du plateau */
 	int pv;
 	
+	/** numéro de vague */
+	int vague = 0;
+	
+	/**
+	 * Constructeur du plateau qui prend en paramètre le chemin vers le fichier correspondant au terrain
+	 * @param path
+	 */
 	public Plateau(String path) {
 
 		this.pv = 100;
@@ -46,18 +65,25 @@ public class Plateau {
 						break;
 						
 					case '1': 
-						 c = new Case(x,y,true, false, false);
-						chemin.add(c);
+						c = new Case(x,y,true, false, false);
+						casesChemin.add(c);
 						break;
 						
 					case '3':
-						 c = new Case(x,y,true, true, false);
-						chemin.add(c);
+						c = new Case(x,y,true, true, false);
+						casesChemin.add(c);
 						break;
 						
 					case '4':
-						 c = new Case(x,y,true, false, true);
-						chemin.add(c);
+						c = new Case(x,y,true, false, true);
+						casesChemin.add(c);
+						break;
+						
+					case '5':
+						c= new Case(x,y,false,false,false);
+						terrain.add(c);
+						Tour tour = new Tour("tour1", 2, false, 30, 0, 1);
+						c.setTour(tour);
 						break;
 						
 					default:
@@ -77,79 +103,151 @@ public class Plateau {
 		}
 	}
 	
-	public void run(){
-		int tour = 1;
-		while(pv > 0){
-			deplacerEnnemis();
+	/**
+	 * Lancement de la partie, va boucler jusqu'à ce que le plateau n'ai plus de vie
+	 */
+	public void run() {
+		
+		boolean vagueTerminee = false;
+		while(pv > 0 ){
+			vagueTerminee = true;
+			for(Case caseChemin: casesChemin){
+				if (!caseChemin.getListEnnemis().isEmpty()){
+					vagueTerminee = false;
+					break;
+					
+				}
+			}
 			
-			tour++;
+			if(vagueTerminee){
+				vague++;
+				//TODO gestion des tours
+				
+				try {
+					TimeUnit.SECONDS.sleep(1);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				genererNouveauxEnnemis();
+			}
+			
+			deplacerEnnemis();
+			attaquer();
+
 		}
-		System.out.println("Vous avez perdu après " + tour + "tours");
+		System.out.println("Vous avez perdu après " + vague + " tours");
 	}
 	
+	/**
+	 * Génère de nouveaux ennemis et les ajoutes au plateau
+	 */
+	public void genererNouveauxEnnemis(){
+		for(int i =0; i<vague; i++) {
+			Ennemi ennemi = new Ennemi("bob" +i, 1, 25 + vague, 20, 1);
+			casesChemin.get(0).listEnnemis.add(ennemi);
+		}
+	}
+	
+	/**
+	 * Permet aux tours d'attaquer un ennemi à portée
+	 */
 	public void attaquer(){
+		ArrayList<Case> reverse =  (ArrayList<Case>) casesChemin.clone();
+		Collections.reverse(reverse);
+		
 		for(Case actuelle: terrain){
 			if(actuelle.getTour() != null){
-				// TODO
+				Tour tour = actuelle.getTour();
+				int portee = tour.getPortee();
+				
+				for(Case caseChemin : reverse){
+					int xMoins = actuelle.getX() - portee;
+					int yMoins = actuelle.getY() - portee;
+					int xPlus = actuelle.getX() + portee;
+					int yPlus = actuelle.getY() + portee;
+										
+					if ((caseChemin.getX() > xMoins &&  caseChemin.getX() < xPlus) 
+					 && (caseChemin.getY() > yMoins &&  caseChemin.getY() < yPlus)
+					 && (!caseChemin.getListEnnemis().isEmpty())){
+						System.out.println(caseChemin.getListEnnemis().get(0).pv);
+						
+						if(caseChemin.getListEnnemis().get(0).perdrePV(tour.getDegat())){
+							caseChemin.getListEnnemis().remove(0);
+							
+						}
+					}
+				}
 			}
 		}
 	}
 	
+	/**
+	 * Déplace tous les ennemis d'une case
+	 */
 	public void deplacerEnnemis(){
-		System.out.println(chemin);
-		for(int i = chemin.size()-1; i > 0; i--){
-			chemin.get(i).setListEnnemis(chemin.get(i-1).getListEnnemis());
+		System.out.println(casesChemin);
+		for(int i = casesChemin.size()-1; i > 0; i--){
+			casesChemin.get(i).setListEnnemis(casesChemin.get(i-1).getListEnnemis());
 		}
-		chemin.get(0).listEnnemis = new ArrayList<Ennemi>();
+		casesChemin.get(0).listEnnemis = new ArrayList<Ennemi>();
 		verifierArrive();
 	}
 	
+	/** 
+	 * Faire perdre des pv au plateau si un ennemi est arrivé à la fin du chemin
+	 */
 	public void verifierArrive(){
-		Case arrive = chemin.get(chemin.size()-1);
+		Case arrive = casesChemin.get(casesChemin.size()-1);
 		for(Ennemi e: arrive.listEnnemis){
 			this.pv -= e.degat;
 		}
 	}
 
+	/**
+	 * permet de trier le chemin
+	 */
 	public void determinerChemin(){
 		ArrayList<Case> ordonnee = new ArrayList<>();
-		for(Case c: chemin){
+		for(Case c: casesChemin){
 			if(c.isDepart()){
 				ordonnee.add(c);
-				chemin.remove(c);
+				casesChemin.remove(c);
 				
 				break;
 			}	
 		}
 		
-		while(chemin.size() > 1 ){
+		while(casesChemin.size() > 1 ){
 			Case actuelle = ordonnee.get(ordonnee.size()-1);			
 			ArrayList<Case> voisins = getCasesVoisine(actuelle);
 			
 			if(voisins.size() == 2){
-				System.out.println(voisins.get(0));
-				System.out.println(voisins.get(1));
 				Case precedente = ordonnee.get(ordonnee.size()-2);
 				Case suivante = getCaseSuivante(voisins, precedente);
 				ordonnee.add(suivante);
-				chemin.remove(suivante);
+				casesChemin.remove(suivante);
 			}
 			else if (voisins.size() == 1){
 				ordonnee.add(voisins.get(0));
-				chemin.remove(voisins.get(0));
+				casesChemin.remove(voisins.get(0));
 			}
 			
 		}
-		ordonnee.addAll(chemin);
-		this.chemin = ordonnee;
+		ordonnee.addAll(casesChemin);
+		this.casesChemin = ordonnee;
 	}
 	
+	/**
+	 * Récupère les cases voisines d'une case passée en paramètre
+	 * @param _case la case à chercher
+	 * @return une liste des cases voisines
+	 */
 	private ArrayList<Case> getCasesVoisine(Case _case){
 		int x = _case.getX();
 		int y = _case.getY();
 		ArrayList<Case> cheminVoisins = new ArrayList<>();
 		
-		for(Case actuelle : chemin){
+		for(Case actuelle : casesChemin){
 			if ((actuelle.getX() == x && (actuelle.getY() == y-1 || actuelle.getY() == y+1)) 
 			 || (actuelle.getY() == y && (actuelle.getX() == x-1 || actuelle.getX() == x+1)))
 			{
@@ -160,6 +258,12 @@ public class Plateau {
 		return cheminVoisins;
 	}
 	
+	/**
+	 * Récupère la case suivante du chemin d'une case donnée
+	 * @param voisin les voisins de la case
+	 * @param precedente la case à chercher
+	 * @return la case suivante du chemin
+	 */
 	public Case getCaseSuivante(ArrayList<Case> voisin, Case precedente ){
 		Case rt = null;
 		for(Case c : voisin){
@@ -171,12 +275,16 @@ public class Plateau {
 		return rt;
 	}
 	
+	/**
+	 * récupère la liste des cases chemins
+	 * @return la liste des cases chemins
+	 */
 	public ArrayList<Case> getChemin(){
-		return chemin;
+		return casesChemin;
 	}
 
 	@Override
 	public String toString() {
-		return "Plateau [terrain=" + terrain +", Chemin=" + chemin + ", taille=" + taille + "]";
+		return "Plateau [terrain=" + terrain +", Chemin=" + casesChemin + ", taille=" + taille + "]";
 	}
 }

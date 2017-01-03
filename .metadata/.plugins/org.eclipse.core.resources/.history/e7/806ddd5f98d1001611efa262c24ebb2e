@@ -1,0 +1,246 @@
+package com.epsi.tower_defense;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.sql.Time;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Timer;
+import java.util.concurrent.TimeUnit;
+
+import javax.swing.plaf.SliderUI;
+
+
+public class Plateau {
+	
+	ArrayList<Case> terrain = new ArrayList<>();
+	ArrayList<Case> casesChemin = new ArrayList<>();
+	
+	int taille;
+	
+	int pv;
+	
+	int tour = 0;
+	
+	public Plateau(String path) {
+
+		this.pv = 100;
+		//lecture du fichier texte	
+		try{
+			InputStream ips=new FileInputStream(path); 
+			InputStreamReader ipsr=new InputStreamReader(ips);
+			BufferedReader br=new BufferedReader(ipsr);
+			String ligne, map = "";
+			while ((ligne=br.readLine())!=null){
+				map += ligne;
+			}
+			
+			br.close();
+			
+			//Map carré
+			taille = (int) Math.sqrt(map.length());
+			int x =0 , y = 0;
+			
+			for(char s: map.toCharArray()){
+				
+				Case c;
+				switch (s) {
+					case '0':
+						c= new Case(x,y,false,false,false);
+						terrain.add(c);
+						break;
+						
+					case '1': 
+						c = new Case(x,y,true, false, false);
+						casesChemin.add(c);
+						break;
+						
+					case '3':
+						c = new Case(x,y,true, true, false);
+						casesChemin.add(c);
+						break;
+						
+					case '4':
+						c = new Case(x,y,true, false, true);
+						casesChemin.add(c);
+						break;
+						
+					case '5':
+						c= new Case(x,y,false,false,false);
+						terrain.add(c);
+						Tour tour = new Tour("tour1", 2, false, 30, 0, 1);
+						c.setTour(tour);
+						break;
+						
+					default:
+						throw new Exception("Case non valide");
+				}
+				y++;
+				if(y == taille){
+					x++;
+					y = 0;
+				}
+
+			}
+			determinerChemin();
+		}		
+		catch (Exception e){
+			System.out.println(e.toString());
+		}
+	}
+	
+	public void run() {
+		
+		boolean vagueTerminee = false;
+		while(pv > 0 ){
+			vagueTerminee = true;
+			for(Case caseChemin: casesChemin){
+				if (!caseChemin.getListEnnemis().isEmpty()){
+					vagueTerminee = false;
+					break;
+					
+				}
+			}
+			
+			if(vagueTerminee){
+				tour++;
+				//TODO gestion de tour
+				try {
+					TimeUnit.SECONDS.sleep(1);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				genererNouveauxEnnemis();
+			}
+			
+			
+			deplacerEnnemis();
+			attaquer();
+
+		}
+		System.out.println("Vous avez perdu après " + tour + " tours");
+	}
+	
+	public void genererNouveauxEnnemis(){
+		for(int i =0; i<tour; i++) {
+			Ennemi ennemi = new Ennemi("bob" +i, 1, 25 + tour, 20, 1);
+			casesChemin.get(0).listEnnemis.add(ennemi);
+		}
+	}
+	
+	public void attaquer(){
+		ArrayList<Case> reverse =  (ArrayList<Case>) casesChemin.clone();
+		Collections.reverse(reverse);
+		
+		for(Case actuelle: terrain){
+			if(actuelle.getTour() != null){
+				Tour tour = actuelle.getTour();
+				int portee = tour.getPortee();
+				
+				
+				for(Case caseChemin : reverse){
+					int xMoins = actuelle.getX() - portee;
+					int yMoins = actuelle.getY() - portee;
+					int xPlus = actuelle.getX() + portee;
+					int yPlus = actuelle.getY() + portee;
+										
+					if ((caseChemin.getX() > xMoins &&  caseChemin.getX() < xPlus) 
+					 && (caseChemin.getY() > yMoins &&  caseChemin.getY() < yPlus)
+					 && (!caseChemin.getListEnnemis().isEmpty())){
+						System.out.println(caseChemin.getListEnnemis().get(0).pv);
+						
+						if(caseChemin.getListEnnemis().get(0).perdrePV(tour.getDegat())){
+							caseChemin.getListEnnemis().remove(0);
+							
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	public void deplacerEnnemis(){
+		System.out.println(casesChemin);
+		for(int i = casesChemin.size()-1; i > 0; i--){
+			casesChemin.get(i).setListEnnemis(casesChemin.get(i-1).getListEnnemis());
+		}
+		casesChemin.get(0).listEnnemis = new ArrayList<Ennemi>();
+		verifierArrive();
+	}
+	
+	public void verifierArrive(){
+		Case arrive = casesChemin.get(casesChemin.size()-1);
+		for(Ennemi e: arrive.listEnnemis){
+			this.pv -= e.degat;
+		}
+	}
+
+	public void determinerChemin(){
+		ArrayList<Case> ordonnee = new ArrayList<>();
+		for(Case c: casesChemin){
+			if(c.isDepart()){
+				ordonnee.add(c);
+				casesChemin.remove(c);
+				
+				break;
+			}	
+		}
+		
+		while(casesChemin.size() > 1 ){
+			Case actuelle = ordonnee.get(ordonnee.size()-1);			
+			ArrayList<Case> voisins = getCasesVoisine(actuelle);
+			
+			if(voisins.size() == 2){
+				Case precedente = ordonnee.get(ordonnee.size()-2);
+				Case suivante = getCaseSuivante(voisins, precedente);
+				ordonnee.add(suivante);
+				casesChemin.remove(suivante);
+			}
+			else if (voisins.size() == 1){
+				ordonnee.add(voisins.get(0));
+				casesChemin.remove(voisins.get(0));
+			}
+			
+		}
+		ordonnee.addAll(casesChemin);
+		this.casesChemin = ordonnee;
+	}
+	
+	private ArrayList<Case> getCasesVoisine(Case _case){
+		int x = _case.getX();
+		int y = _case.getY();
+		ArrayList<Case> cheminVoisins = new ArrayList<>();
+		
+		for(Case actuelle : casesChemin){
+			if ((actuelle.getX() == x && (actuelle.getY() == y-1 || actuelle.getY() == y+1)) 
+			 || (actuelle.getY() == y && (actuelle.getX() == x-1 || actuelle.getX() == x+1)))
+			{
+				cheminVoisins.add(actuelle);
+			}
+		}
+		
+		return cheminVoisins;
+	}
+	
+	public Case getCaseSuivante(ArrayList<Case> voisin, Case precedente ){
+		Case rt = null;
+		for(Case c : voisin){
+			if(!c.equals(precedente)){
+				rt = c;
+				break;
+			}
+		}
+		return rt;
+	}
+	
+	public ArrayList<Case> getChemin(){
+		return casesChemin;
+	}
+
+	@Override
+	public String toString() {
+		return "Plateau [terrain=" + terrain +", Chemin=" + casesChemin + ", taille=" + taille + "]";
+	}
+}

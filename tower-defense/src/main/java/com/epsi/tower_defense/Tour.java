@@ -1,20 +1,41 @@
 package com.epsi.tower_defense;
 
 public class Tour {
+	
+	/** Son nom */
     String nom;
+    
+    /** sa portée */
     int portee;
+    
+    /** ralentis */
     boolean ralentis;
+    
+    /** ses dégats */
     int degat;
+    
+    /** son prix */
     int prix;
+    
+    /** son niveau */
     int niveau;
     
+    /**
+     * Constructeur d'une tour
+     * @param nom son nom
+     * @param portee sa portée
+     * @param ralentis ralentis
+     * @param degat ses dégats
+     * @param prix son prix
+     * @param niveau son niveau
+     */
     public Tour(String nom, int portee, boolean ralentis, int degat, int prix, int niveau){
         this.nom = nom;
-        this.portee=portee;
-        this.ralentis=ralentis;
-        this.degat=degat;
-        this.prix=prix;
-        this.niveau=niveau;
+        this.portee = portee;
+        this.ralentis = ralentis;
+        this.degat = degat;
+        this.prix = prix;
+        this.niveau = niveau;
     }
 
 	public String getNom() {
