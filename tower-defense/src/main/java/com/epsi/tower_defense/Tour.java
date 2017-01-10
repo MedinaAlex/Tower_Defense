@@ -37,6 +37,20 @@ public class Tour {
         this.prix = prix;
         this.niveau = niveau;
     }
+    
+    /**
+     * Permet d'augmenter d'un niveau la tour
+     */
+    public void upgrade(){
+    	niveau++;
+    	if(niveau % 5 == 0){
+    		portee++;
+    		ralentis = true;	
+    	}
+    	
+    	degat += niveau + 2;
+    	prix += 20;
+    }
 
 	public String getNom() {
 		return nom;
