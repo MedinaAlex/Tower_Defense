@@ -23,6 +23,8 @@ public class Ennemi {
     int coorX = 0;
     int coorY = 0;
 
+    char direction;
+
     /**
      * Constructeur d'un ennemi
      * @param nom son nom
@@ -31,12 +33,16 @@ public class Ennemi {
      * @param degat ses degats
      * @param prix son prix
      */
-    public Ennemi (String nom, int vitesse, int pv, int degat, int prix){
+    public Ennemi (String nom, int vitesse, int pv, int degat, int prix, int coorX, int coorY, char direction){
         this.nom = nom;
         this.vitesse = vitesse;
         this.pv = pv;
         this.degat = degat;
         this.prix = prix;
+        this.coorX = coorX;
+        this.coorY = coorY;
+        this.direction = direction;
+
 
     }
     

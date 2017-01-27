@@ -21,6 +21,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import sun.awt.image.GifImageDecoder;
@@ -28,9 +29,7 @@ import sun.awt.image.GifImageDecoder;
 //import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import static java.awt.image.ImageObserver.WIDTH;
@@ -53,15 +52,7 @@ public class Graph extends Application {
         final Image image3 = new Image("file:"+CROISEMENT3);
         final Image image4 = new Image("file:"+END);
         final Image image5 = new Image("file:"+ARR);*/
-        public static String dungeon2 =
-                "X X X X X X X X X X\n"+
-                        "X X f - - - - - t X\n"+
-                        "X X X X X X X X l X\n"+
-                        "X X X + v X X X l X\n"+
-                        "X X X X l X X X l X\n"+
-                        "X X X X p - - - m X\n"+
-                        "X X X X X X X X e X\n"+
-                        "X X X X X X X X X X\n" ;
+
        public static void main(String[] args) {
 
            Application.launch(Graph.class, args);
@@ -91,6 +82,7 @@ public class Graph extends Application {
             Scene theScene = new Scene( root );
             stage.setScene( theScene );
              Canvas canvas = new Canvas (MAX,  MAX);
+            final GraphicsContext gc = canvas.getGraphicsContext2D();
             canvas.addEventHandler(MouseEvent.MOUSE_CLICKED,
                     new EventHandler<MouseEvent>() {
                         @Override
@@ -100,11 +92,20 @@ public class Graph extends Application {
                             onclic(coordoneeX, coordoneeY);
                         }
                     });
+            canvas.addEventHandler(MouseEvent.MOUSE_PRESSED,
+                    new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent t) {
+                            double coordoneeX = t.getSceneX();
+                            double coordoneeY = t.getSceneY();
+                            onSurvole(coordoneeX, coordoneeY, gc);
+                        }
+                    });
             final GridPane gridpane = new GridPane();
             // gridpane.setPadding(new Insets(5));
             gridpane.setHgap(10);
             gridpane.setVgap(10);
-            final GraphicsContext gc = canvas.getGraphicsContext2D();
+
             final long startNanoTime = System.nanoTime();
             final Label or = new Label( Integer.toString(plateau.or)+" Or");
             or.setFont(new Font(50));
@@ -121,7 +122,7 @@ public class Graph extends Application {
             {
                 public void handle(long currentNanoTime)
                 {
-                    double t = (currentNanoTime - startNanoTime) / 1000000000.0;
+                   // double t = (currentNanoTime - startNanoTime) / 100.0;
 
 
                     gc.clearRect(0, 0, MAX,MAX);
@@ -130,9 +131,23 @@ public class Graph extends Application {
 
 
                     Boolean test = run();
+                    try {
+
+                        TimeUnit.NANOSECONDS.sleep(5);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
                 }
 
             }.start();
+            Timer timer = new Timer();
+            timer.scheduleAtFixedRate(new TimerTask() {
+                @Override
+                public void run() {
+                    plateau.attaquer();
+                }
+            }, 0, 2000);
 
             // run(primaryStage);
            // fileSaveService.start();
@@ -140,12 +155,30 @@ public class Graph extends Application {
             //run();
             stage.show();
         }
-        private void affichage(GraphicsContext gc)
+
+    private void onSurvole(double coordoneeX, double coordoneeY, GraphicsContext gc) {
+        int caseX = (int) (coordoneeY/100);
+        int caseY = (int) (coordoneeX/100);
+        for (Case caseTerrain : plateau.terrain) {
+            if (caseTerrain.getX() == caseX && caseTerrain.getY()==caseY){
+                    Circle circle = new Circle();
+                    circle.setCenterX(caseTerrain.getX()*100 +50);
+                    circle.setCenterY(caseTerrain.getY()*100 +50);
+                    circle.setRadius(caseTerrain.getTour().portee);
+                   // gc.fillOval(caseTerrain.getX()*100 +50, caseTerrain.getY()*100 +50, caseTerrain.getTour().portee , 300 );
+                gc.fillOval(30,30,30,30);
+                }
+            }
+        }
+
+
+    private void affichage(GraphicsContext gc)
         {
             for (Case caseTerrain: plateau.terrain){
                 if (caseTerrain.getTour() != null)
                 {
                     Image imageChemin = new Image("file:ressources\\img\\tour.png");
+
                     gc.drawImage(imageChemin, caseTerrain.y * inc, caseTerrain.x * inc  ,inc,inc);
                 }
                 else {
@@ -158,37 +191,15 @@ public class Graph extends Application {
                 imageChemin = new Image("file:ressources\\img\\chemin.png");
                 gc.drawImage(imageChemin, caseChemin.y * inc, caseChemin.x * inc  ,inc,inc);
             }
-            for (Case caseChemin: plateau.getChemin()){
-                Image imageChemin;
-                if(!caseChemin.getListEnnemis().isEmpty()){
-                    Ennemi enemi = caseChemin.listEnnemis.get(0);
-                    if (caseChemin.horizontale) {
-                        imageChemin = new Image("file:ressources\\img\\Viking.png");
-                        gc.drawImage(imageChemin, (caseChemin.y * inc )+ enemi.deplacement, caseChemin.x * inc, inc, inc);
-                        enemi.deplacement++;
-                        try {
-                            Thread.sleep(7 );
-                        } catch (InterruptedException e) {
-                            // Do nothing
-                        }
-                    }
-                    else {
-                        imageChemin = new Image("file:ressources\\img\\Viking.png");
-                        gc.drawImage(imageChemin, caseChemin.y * inc, caseChemin.x * inc, inc, inc);
-                    }
-                }
-                else {
-
-                }
-
-
-
-
+            for (Ennemi ennemi  :plateau.listEnnemi) {
+            imageChemin = new Image("file:ressources\\img\\Viking.png");
+                gc.drawImage(imageChemin, ennemi.coorY, ennemi.coorX -20,100,100 );
             }
             Image imageChemin = new Image("file:ressources\\img\\NextWave.png");
 
 
             gc.drawImage(imageChemin, 8 * inc, 0 * inc  ,200,100 );
+
         }
 
    /* private void affichageGraphique() {
@@ -241,7 +252,7 @@ public class Graph extends Application {
         for (Case caseTerrain : plateau.terrain) {
             if (caseTerrain.getX() == caseX && caseTerrain.getY()==caseY){
                 if (plateau.or >= 50 && caseTerrain.tour ==null) {
-                    Tour tour = new Tour("tour1", 2, false, 30, 0, 1);
+                    Tour tour = new Tour("tour1", 200, false, 30, 0, 1);
                     caseTerrain.setTour(tour);
                     plateau.or = plateau.or - 50;
                 }
@@ -452,7 +463,7 @@ public class Graph extends Application {
          } catch (InterruptedException e) {
              e.printStackTrace();
          }*/
-            plateau.attaquer();
+
         /* try {
 
              TimeUnit.NANOSECONDS.sleep(500);

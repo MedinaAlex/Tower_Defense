@@ -22,6 +22,8 @@ public class Plateau {
 	
 	/** liste des chemins */
 	ArrayList<Case> casesChemin = new ArrayList<>();
+
+	ArrayList<Ennemi> listEnnemi = new ArrayList<>();
 	
 	/** taille du terrain */
 	int taille;
@@ -62,39 +64,31 @@ public class Plateau {
 				
 				Case c;
 				switch (s) {
-					case '0':
-						c= new Case(x,y,false,false,false,false);
-						terrain.add(c);
-						break;
-						
-					case '1': 
-						c = new Case(x,y,true, false, false,false);
+					case 'x':
+						c= new Case(x,y,false,false,false,false, 'x');
 						casesChemin.add(c);
 						break;
-					case '-':
-						c = new Case(x,y,true, false, false,true);
-						casesChemin.add(c);
-						break;
-						
+
 					case '3':
-						c = new Case(x,y,true, true, false, true);
+						c = new Case(x,y,true, true, false, true, 'D');
 						casesChemin.add(c);
 						break;
 						
 					case '4':
-						c = new Case(x,y,true, false, true, false);
+						c = new Case(x,y,true, false, true, false, 'x');
 						casesChemin.add(c);
 						break;
-						
-					case '5':
-						c= new Case(x,y,false,false,false,false);
+					case '0':
+						c = new Case(x,y,false, false, false, false, 'x');
 						terrain.add(c);
-						Tour tour = new Tour("tour1", 2, false, 30, 0, 1);
-						c.setTour(tour);
 						break;
 						
+
 					default:
-						throw new Exception("Case non valide");
+
+						c = new Case(x,y,true, false, false,true, s);
+						casesChemin.add(c);
+						break;
 				}
 				y++;
 				if(y == taille){
@@ -118,8 +112,9 @@ public class Plateau {
 	 */
 	public void genererNouveauxEnnemis(){
 		for(int i =0; i<vague; i++) {
-			Ennemi ennemi = new Ennemi("bob" +i, 1, 30 + vague, 20, 1);
-			casesChemin.get(0).listEnnemis.add(ennemi);
+			Case caseDepart = casesChemin.get(0);
+			Ennemi ennemi = new Ennemi("bob" +i, 1, 30 + vague, 20, 10,caseDepart.x*100 , caseDepart.y*100, caseDepart.direction);
+			listEnnemi.add(ennemi);
 		}
 	}
 	
@@ -127,7 +122,35 @@ public class Plateau {
 	 * Permet aux tours d'attaquer un ennemi à portée
 	 */
 	public void attaquer(){
-		ArrayList<Case> reverse =  (ArrayList<Case>) casesChemin.clone();
+
+
+		for (Case caseTerrain:terrain) {
+			if(caseTerrain.getTour() != null){
+				Tour tour = caseTerrain.getTour();
+				int nombreTire = 1;
+				int coorTourX = (caseTerrain.getX() * 100);
+				int coorToury = (caseTerrain.getY() * 100);
+
+				for (Ennemi ennemi:listEnnemi) {
+
+					if (nombreTire == 1) {
+
+						//savoir si les coordonnées de l'ennemi sont dans le cercle
+						//racine_carre((x_point - x_centre)² + (y_centre - y_point)) < rayon
+						if ((Math.sqrt((Math.pow((ennemi.coorX - coorTourX), 2)) + (Math.pow((coorTourX - ennemi.coorX), 2)))) < tour.getPortee()) {
+							nombreTire++;
+							ennemi.pv = ennemi.pv - tour.degat;
+							if (ennemi.pv < 0) {
+								listEnnemi.remove(ennemi);
+							}
+						}
+					}
+				}
+
+			}
+
+		}
+		/*ArrayList<Case> reverse =  (ArrayList<Case>) casesChemin.clone();
 		Collections.reverse(reverse);
 		
 		for(Case actuelle: terrain){
@@ -167,26 +190,45 @@ public class Plateau {
 					}
 				}
 			}
-		}
+		}*/
 	}
 	
 	/**
 	 * Déplace tous les ennemis d'une case
 	 */
 	public void deplacerEnnemis(){
-		System.out.println(casesChemin);
-		for(int i = casesChemin.size()-1; i > 0; i--){
+		char direction = 'x';
+		for (Ennemi ennemi :listEnnemi) {
+			direction = ennemi.direction;
+			for (Case caseC : casesChemin) {
 
-			for (Ennemi ennemi:casesChemin.get(i-1).getListEnnemis()) {
-				if (ennemi.deplacement == 100) {
-					casesChemin.get(i).listEnnemis.add(ennemi);
-					casesChemin.get(i-1).listEnnemis.clear();
-					ennemi.deplacement =0;
+				//on verrifie que la case sur la quels est l'ennemi n'éguille pas
+				if (caseC.aiguilleur && (caseC.getX() * 100 == ennemi.coorX && caseC.getY() * 100 == ennemi.coorY)) {
+					direction = caseC.direction;
+
+
 				}
+
+
 			}
 
-
+			switch (direction) {
+				case 'H':
+					ennemi.coorX--;
+					break;
+				case 'B':
+					ennemi.coorX++;
+					break;
+				case 'D':
+					ennemi.coorY++;
+					break;
+				case 'G':
+					ennemi.coorY--;
+					break;
+			}
+			ennemi.direction = direction;
 		}
+
 		//casesChemin.get(0).listEnnemis = new ArrayList<Ennemi>();
 		verifierArrive();
 	}
