@@ -123,58 +123,15 @@ public class Graph extends Application {
                 {
                     double t = (currentNanoTime - startNanoTime) / 1000000000.0;
 
-                    double x = 232 + 128 * Math.cos(t);
-                    double y = 232 + 128 * Math.sin(t);
+
                     gc.clearRect(0, 0, MAX,MAX);
-
+                    affichage(gc);
                     or.setText (Integer.toString(plateau.or)+" Or");
-                    for (Case caseTerrain: plateau.terrain){
-                        if (caseTerrain.getTour() != null)
-                        {
-                            Image imageChemin = new Image("file:ressources\\img\\tour.png");
-                            gc.drawImage(imageChemin, caseTerrain.y * inc, caseTerrain.x * inc  ,inc,inc);
-                        }
-                        else {
-
-                            Image imageChemin = new Image("file:ressources\\img\\terrain.png");
-                            gc.drawImage(imageChemin, caseTerrain.y * inc, caseTerrain.x * inc, inc, inc);
-                        }
-                    }
-                    List<Case> listCasesChemin = plateau.getChemin();
-                    for (Case caseChemin: listCasesChemin){
-                        Image imageChemin;
-                        if(!caseChemin.getListEnnemis().isEmpty()){
-                            imageChemin = new Image("file:ressources\\img\\Viking.png");
-                        }
-                        else {
-                            imageChemin = new Image("file:ressources\\img\\chemin.png");
-                        }
 
 
-
-                        gc.drawImage(imageChemin, caseChemin.y * inc, caseChemin.x * inc  ,inc,inc);
-                    }
-                    Image imageChemin = new Image("file:ressources\\img\\NextWave.png");
-
-
-                    gc.drawImage(imageChemin, 8 * inc, 0 * inc  ,200,100 );
-                    // background image clears canvas
-                    /*drawShapes(gc, plateau.terrain);
-                    Label or = new Label( Integer.toString(plateau.or)+" Or");
-                    or.setFont(new Font(50));
-                    or.setTextFill(Color.web("#FFD700"));
-
-                    root.getChildren().add(canvas);
-
-
-
-                    GridPane.setHalignment(or, HPos.CENTER);
-                    gridpane.add(or, 0, 0);
-
-                    root.getChildren().add(gridpane);*/
                     Boolean test = run();
                 }
-               // Boolean test = run();
+
             }.start();
 
             // run(primaryStage);
@@ -182,6 +139,56 @@ public class Graph extends Application {
 
             //run();
             stage.show();
+        }
+        private void affichage(GraphicsContext gc)
+        {
+            for (Case caseTerrain: plateau.terrain){
+                if (caseTerrain.getTour() != null)
+                {
+                    Image imageChemin = new Image("file:ressources\\img\\tour.png");
+                    gc.drawImage(imageChemin, caseTerrain.y * inc, caseTerrain.x * inc  ,inc,inc);
+                }
+                else {
+
+                    Image imageChemin = new Image("file:ressources\\img\\terrain.png");
+                    gc.drawImage(imageChemin, caseTerrain.y * inc, caseTerrain.x * inc, inc, inc);
+                }
+            }
+            for (Case caseChemin: plateau.getChemin()){
+                imageChemin = new Image("file:ressources\\img\\chemin.png");
+                gc.drawImage(imageChemin, caseChemin.y * inc, caseChemin.x * inc  ,inc,inc);
+            }
+            for (Case caseChemin: plateau.getChemin()){
+                Image imageChemin;
+                if(!caseChemin.getListEnnemis().isEmpty()){
+                    Ennemi enemi = caseChemin.listEnnemis.get(0);
+                    if (caseChemin.horizontale) {
+                        imageChemin = new Image("file:ressources\\img\\Viking.png");
+                        gc.drawImage(imageChemin, (caseChemin.y * inc )+ enemi.deplacement, caseChemin.x * inc, inc, inc);
+                        enemi.deplacement++;
+                        try {
+                            Thread.sleep(7 );
+                        } catch (InterruptedException e) {
+                            // Do nothing
+                        }
+                    }
+                    else {
+                        imageChemin = new Image("file:ressources\\img\\Viking.png");
+                        gc.drawImage(imageChemin, caseChemin.y * inc, caseChemin.x * inc, inc, inc);
+                    }
+                }
+                else {
+
+                }
+
+
+
+
+            }
+            Image imageChemin = new Image("file:ressources\\img\\NextWave.png");
+
+
+            gc.drawImage(imageChemin, 8 * inc, 0 * inc  ,200,100 );
         }
 
    /* private void affichageGraphique() {
@@ -247,17 +254,17 @@ public class Graph extends Application {
 
 
         static int inc = 100;
-        public  void drawShapes(GraphicsContext gc, ArrayList<Case> terrain) {
+       /* public  void drawShapes(GraphicsContext gc, ArrayList<Case> terrain) {
             gc.setFill(Color.GRAY);
             gc.setStroke(Color.GRAY);
 
 
-            /*for (int i = 0 ; i < MAX; i= i + inc ){
+            for (int i = 0 ; i < MAX; i= i + inc ){
                 gc.strokeLine(i,0,i,MAX);
             }
             for (int i = 0 ; i < MAX; i= i + inc ){
                 gc.strokeLine(0,i,MAX,i);
-            }*/
+            }
 
             for (Case caseTerrain: terrain){
                 if (caseTerrain.getTour() != null)
@@ -362,8 +369,8 @@ public class Graph extends Application {
                             break;
                     }
                 }
-            }*/
-        }
+            }
+        }*/
 
     /**
      * Lancement de la partie, va boucler jusqu'à ce que le plateau n'ai plus de vie
@@ -424,34 +431,34 @@ public class Graph extends Application {
                 }
             }.start();*/
 
-            try {
+            /*try {
                 Thread.sleep(100 );
             } catch (InterruptedException e) {
                 // Do nothing
-            }
+            }*/
 
            //test();
 
-         try {
+         /*try {
 
              TimeUnit.NANOSECONDS.sleep(500);
          } catch (InterruptedException e) {
              e.printStackTrace();
-         }
+         }*/
             plateau.deplacerEnnemis();
-         try {
+         /*try {
 
              TimeUnit.NANOSECONDS.sleep(500);
          } catch (InterruptedException e) {
              e.printStackTrace();
-         }
+         }*/
             plateau.attaquer();
-         try {
+        /* try {
 
              TimeUnit.NANOSECONDS.sleep(500);
          } catch (InterruptedException e) {
              e.printStackTrace();
-         }
+         }*/
 
        // }
        // System.out.println("Vous avez perdu après " + plateau.vague + " tours");

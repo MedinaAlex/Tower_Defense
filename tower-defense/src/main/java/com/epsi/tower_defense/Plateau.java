@@ -63,27 +63,31 @@ public class Plateau {
 				Case c;
 				switch (s) {
 					case '0':
-						c= new Case(x,y,false,false,false);
+						c= new Case(x,y,false,false,false,false);
 						terrain.add(c);
 						break;
 						
 					case '1': 
-						c = new Case(x,y,true, false, false);
+						c = new Case(x,y,true, false, false,false);
+						casesChemin.add(c);
+						break;
+					case '-':
+						c = new Case(x,y,true, false, false,true);
 						casesChemin.add(c);
 						break;
 						
 					case '3':
-						c = new Case(x,y,true, true, false);
+						c = new Case(x,y,true, true, false, true);
 						casesChemin.add(c);
 						break;
 						
 					case '4':
-						c = new Case(x,y,true, false, true);
+						c = new Case(x,y,true, false, true, false);
 						casesChemin.add(c);
 						break;
 						
 					case '5':
-						c= new Case(x,y,false,false,false);
+						c= new Case(x,y,false,false,false,false);
 						terrain.add(c);
 						Tour tour = new Tour("tour1", 2, false, 30, 0, 1);
 						c.setTour(tour);
@@ -174,12 +178,16 @@ public class Plateau {
 		for(int i = casesChemin.size()-1; i > 0; i--){
 
 			for (Ennemi ennemi:casesChemin.get(i-1).getListEnnemis()) {
-				casesChemin.get(i).listEnnemis.add(ennemi);
+				if (ennemi.deplacement == 100) {
+					casesChemin.get(i).listEnnemis.add(ennemi);
+					casesChemin.get(i-1).listEnnemis.clear();
+					ennemi.deplacement =0;
+				}
 			}
 
-			casesChemin.get(i-1).listEnnemis.clear();
+
 		}
-		casesChemin.get(0).listEnnemis = new ArrayList<Ennemi>();
+		//casesChemin.get(0).listEnnemis = new ArrayList<Ennemi>();
 		verifierArrive();
 	}
 	

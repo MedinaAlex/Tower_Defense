@@ -19,7 +19,10 @@ public class Ennemi {
     
     /** l'argent gagné lorsque l'ennemi est tué */
     int prix;
-   
+
+    int coorX = 0;
+    int coorY = 0;
+
     /**
      * Constructeur d'un ennemi
      * @param nom son nom

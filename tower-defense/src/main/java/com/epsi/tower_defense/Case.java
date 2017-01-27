@@ -21,7 +21,7 @@ public class Case {
     /** Défini si la case est une arrivé */
     boolean arrive = false;
 
-
+	boolean horizontale;
     
     /** la case suivante */
     Case suivante;
@@ -44,12 +44,13 @@ public class Case {
      * @param depart le depart
      * @param arrive le arrive
      */
-    public Case (int x, int y, boolean chemin, boolean depart, boolean arrive){
+    public Case (int x, int y, boolean chemin, boolean depart, boolean arrive, boolean horizontale){
     	this.x = x;
     	this.y = y;
         this.chemin = chemin;
         this.depart = depart;
         this.arrive = arrive;
+        this.horizontale = horizontale;
     }
 
 	/* (non-Javadoc)

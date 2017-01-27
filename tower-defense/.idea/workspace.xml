@@ -34,19 +34,20 @@
       <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state relative-caret-position="860">
+              <caret line="169" column="42" lean-forward="false" selection-start-line="169" selection-start-column="42" selection-end-line="169" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3666#4025#0" expanded="true" />
                 <element signature="e#4024#4025#0" expanded="true" />
-                <element signature="e#4689#7185#0" expanded="true" />
-                <element signature="e#7184#7185#0" expanded="true" />
-                <element signature="e#15186#15187#0" expanded="true" />
-                <element signature="e#15234#15235#0" expanded="true" />
-                <marker date="1485541875060" expanded="false" signature="17748:17810" ph="() → {" />
-                <marker date="1485541875060" expanded="false" signature="17985:18110" ph="(EventHandler) (t) → {" />
-                <marker date="1485541875060" expanded="false" signature="18317:18344" ph="}" />
+                <element signature="e#4689#5111#0" expanded="true" />
+                <element signature="e#5110#5111#0" expanded="true" />
+                <element signature="e#15197#15198#0" expanded="true" />
+                <element signature="e#15245#15246#0" expanded="true" />
+                <element signature="e#17775#19633#0" expanded="true" />
+                <element signature="e#19632#19633#0" expanded="true" />
+                <marker date="1485544446695" expanded="false" signature="18012:18137" ph="(EventHandler) (t) → {" />
+                <marker date="1485544446695" expanded="false" signature="18344:18371" ph="}" />
               </folding>
             </state>
           </provider>
@@ -82,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plateau.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Plateau.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Plateau.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3891">
-              <caret line="159" column="53" lean-forward="false" selection-start-line="159" selection-start-column="53" selection-end-line="159" selection-end-column="53" />
+            <state relative-caret-position="393">
+              <caret line="182" column="45" lean-forward="false" selection-start-line="182" selection-start-column="45" selection-end-line="182" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -95,8 +96,8 @@
       <file leaf-file-name="Ennemi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Ennemi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-462">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="990">
+              <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -112,20 +113,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cheminTest.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ressources/img/cheminTest.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="Case.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Case.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="52" column="39" lean-forward="false" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Case.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Case.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
+      <file leaf-file-name="Viking.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ressources/img/Viking.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -158,10 +159,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Plateau.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Graph.java" />
         <option value="$PROJECT_DIR$/ressources/terrainTest.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Case.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Plateau.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Graph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Ennemi.java" />
       </list>
     </option>
   </component>
@@ -764,12 +766,12 @@
       <workItem from="1485378303720" duration="2940000" />
       <workItem from="1485429719074" duration="2917000" />
       <workItem from="1485463022704" duration="3742000" />
-      <workItem from="1485517481029" duration="8572000" />
+      <workItem from="1485517481029" duration="11705000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52517000" />
+    <option name="totallyTimeSpent" value="55650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3853" y="955" width="3866" height="2106" extended-state="6" />
@@ -778,14 +780,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738096" sideWeight="0.47890624" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738096" sideWeight="0.4778646" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15584415" sideWeight="0.5653646" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15584415" sideWeight="0.5705729" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15584415" sideWeight="0.43463543" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15584415" sideWeight="0.4294271" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -797,7 +799,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4659091" sideWeight="0.465625" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4659091" sideWeight="0.46145833" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -816,38 +818,14 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Graph.java</url>
-          <line>176</line>
-          <properties field="test" />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Graph.java</url>
-          <line>223</line>
+          <line>165</line>
           <properties />
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Plateau.java</url>
-          <line>172</line>
-          <properties />
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Graph.java</url>
-          <line>143</line>
-          <properties />
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Graph.java</url>
-          <line>85</line>
-          <properties />
-          <option name="timeStamp" value="53" />
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="54" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -893,13 +871,14 @@
             <element signature="imports" expanded="true" />
             <element signature="e#3666#4025#0" expanded="true" />
             <element signature="e#4024#4025#0" expanded="true" />
-            <element signature="e#4689#7185#0" expanded="true" />
-            <element signature="e#7184#7185#0" expanded="true" />
-            <element signature="e#15186#15187#0" expanded="true" />
-            <element signature="e#15234#15235#0" expanded="true" />
-            <marker date="1485541875060" expanded="false" signature="17748:17810" ph="() → {" />
-            <marker date="1485541875060" expanded="false" signature="17985:18110" ph="(EventHandler) (t) → {" />
-            <marker date="1485541875060" expanded="false" signature="18317:18344" ph="}" />
+            <element signature="e#4689#5111#0" expanded="true" />
+            <element signature="e#5110#5111#0" expanded="true" />
+            <element signature="e#15197#15198#0" expanded="true" />
+            <element signature="e#15245#15246#0" expanded="true" />
+            <element signature="e#17775#19633#0" expanded="true" />
+            <element signature="e#19632#19633#0" expanded="true" />
+            <marker date="1485544446695" expanded="false" signature="18012:18137" ph="(EventHandler) (t) → {" />
+            <marker date="1485544446695" expanded="false" signature="18344:18371" ph="}" />
           </folding>
         </state>
       </provider>
@@ -1055,13 +1034,14 @@
             <element signature="imports" expanded="true" />
             <element signature="e#3666#4025#0" expanded="true" />
             <element signature="e#4024#4025#0" expanded="true" />
-            <element signature="e#4689#7185#0" expanded="true" />
-            <element signature="e#7184#7185#0" expanded="true" />
-            <element signature="e#15186#15187#0" expanded="true" />
-            <element signature="e#15234#15235#0" expanded="true" />
-            <marker date="1485541875060" expanded="false" signature="17748:17810" ph="() → {" />
-            <marker date="1485541875060" expanded="false" signature="17985:18110" ph="(EventHandler) (t) → {" />
-            <marker date="1485541875060" expanded="false" signature="18317:18344" ph="}" />
+            <element signature="e#4689#5111#0" expanded="true" />
+            <element signature="e#5110#5111#0" expanded="true" />
+            <element signature="e#15197#15198#0" expanded="true" />
+            <element signature="e#15245#15246#0" expanded="true" />
+            <element signature="e#17775#19633#0" expanded="true" />
+            <element signature="e#19632#19633#0" expanded="true" />
+            <marker date="1485544446695" expanded="false" signature="18012:18137" ph="(EventHandler) (t) → {" />
+            <marker date="1485544446695" expanded="false" signature="18344:18371" ph="}" />
           </folding>
         </state>
       </provider>
@@ -1140,13 +1120,14 @@
             <element signature="imports" expanded="true" />
             <element signature="e#3666#4025#0" expanded="true" />
             <element signature="e#4024#4025#0" expanded="true" />
-            <element signature="e#4689#7185#0" expanded="true" />
-            <element signature="e#7184#7185#0" expanded="true" />
-            <element signature="e#15186#15187#0" expanded="true" />
-            <element signature="e#15234#15235#0" expanded="true" />
-            <marker date="1485541875060" expanded="false" signature="17748:17810" ph="() → {" />
-            <marker date="1485541875060" expanded="false" signature="17985:18110" ph="(EventHandler) (t) → {" />
-            <marker date="1485541875060" expanded="false" signature="18317:18344" ph="}" />
+            <element signature="e#4689#5111#0" expanded="true" />
+            <element signature="e#5110#5111#0" expanded="true" />
+            <element signature="e#15197#15198#0" expanded="true" />
+            <element signature="e#15245#15246#0" expanded="true" />
+            <element signature="e#17775#19633#0" expanded="true" />
+            <element signature="e#19632#19633#0" expanded="true" />
+            <marker date="1485544446695" expanded="false" signature="18012:18137" ph="(EventHandler) (t) → {" />
+            <marker date="1485544446695" expanded="false" signature="18344:18371" ph="}" />
           </folding>
         </state>
       </provider>
@@ -1296,11 +1277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ressources/img/Viking.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_101/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -1321,14 +1297,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="453" column="0" lean-forward="false" selection-start-line="453" selection-start-column="0" selection-end-line="453" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Ennemi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-462">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1357,23 +1325,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3666#4025#0" expanded="true" />
-            <element signature="e#4024#4025#0" expanded="true" />
-            <element signature="e#4689#7185#0" expanded="true" />
-            <element signature="e#7184#7185#0" expanded="true" />
-            <element signature="e#15186#15187#0" expanded="true" />
-            <element signature="e#15234#15235#0" expanded="true" />
-            <marker date="1485541875060" expanded="false" signature="17748:17810" ph="() → {" />
-            <marker date="1485541875060" expanded="false" signature="17985:18110" ph="(EventHandler) (t) → {" />
-            <marker date="1485541875060" expanded="false" signature="18317:18344" ph="}" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/ressources/img/Viking.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ressources/terrainTest.json">
@@ -1384,18 +1338,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Plateau.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3891">
-          <caret line="159" column="53" lean-forward="false" selection-start-line="159" selection-start-column="53" selection-end-line="159" selection-end-column="53" />
+        <state relative-caret-position="860">
+          <caret line="169" column="42" lean-forward="false" selection-start-line="169" selection-start-column="42" selection-end-line="169" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3666#4025#0" expanded="true" />
+            <element signature="e#4024#4025#0" expanded="true" />
+            <element signature="e#4689#5111#0" expanded="true" />
+            <element signature="e#5110#5111#0" expanded="true" />
+            <element signature="e#15197#15198#0" expanded="true" />
+            <element signature="e#15245#15246#0" expanded="true" />
+            <element signature="e#17775#19633#0" expanded="true" />
+            <element signature="e#19632#19633#0" expanded="true" />
+            <marker date="1485544446695" expanded="false" signature="18012:18137" ph="(EventHandler) (t) → {" />
+            <marker date="1485544446695" expanded="false" signature="18344:18371" ph="}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Ennemi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Case.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="546">
+          <caret line="52" column="39" lean-forward="false" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epsi/tower_defense/Plateau.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="182" column="45" lean-forward="false" selection-start-line="182" selection-start-column="45" selection-end-line="182" selection-end-column="45" />
           <folding />
         </state>
       </provider>
