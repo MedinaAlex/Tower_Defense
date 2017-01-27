@@ -30,7 +30,10 @@ public class Plateau {
 	int pv;
 	
 	/** numéro de vague */
-	int vague = 0;
+	int vague = 1;
+
+	/** Quantitée d'or */
+	int or = 100;
 	
 	/**
 	 * Constructeur du plateau qui prend en paramètre le chemin vers le fichier correspondant au terrain
@@ -97,53 +100,21 @@ public class Plateau {
 
 			}
 			determinerChemin();
+			//Graph.creerPlateau(terrain);
 		}		
 		catch (Exception e){
 			System.out.println(e.toString());
 		}
 	}
 	
-	/**
-	 * Lancement de la partie, va boucler jusqu'à ce que le plateau n'ai plus de vie
-	 */
-	public void run() {
-		
-		boolean vagueTerminee = false;
-		while(pv > 0 ){
-			vagueTerminee = true;
-			for(Case caseChemin: casesChemin){
-				if (!caseChemin.getListEnnemis().isEmpty()){
-					vagueTerminee = false;
-					break;
-					
-				}
-			}
-			
-			if(vagueTerminee){
-				vague++;
-				//TODO gestion des tours
-				
-				try {
-					TimeUnit.SECONDS.sleep(1);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				genererNouveauxEnnemis();
-			}
-			
-			deplacerEnnemis();
-			attaquer();
 
-		}
-		System.out.println("Vous avez perdu après " + vague + " tours");
-	}
 	
 	/**
 	 * Génère de nouveaux ennemis et les ajoutes au plateau
 	 */
 	public void genererNouveauxEnnemis(){
 		for(int i =0; i<vague; i++) {
-			Ennemi ennemi = new Ennemi("bob" +i, 1, 25 + vague, 20, 1);
+			Ennemi ennemi = new Ennemi("bob" +i, 1, 30 + vague, 20, 1);
 			casesChemin.get(0).listEnnemis.add(ennemi);
 		}
 	}
@@ -172,6 +143,20 @@ public class Plateau {
 						System.out.println(caseChemin.getListEnnemis().get(0).pv);
 						
 						if(caseChemin.getListEnnemis().get(0).perdrePV(tour.getDegat())){
+
+							//On vérifie si la vague est terminer uniquement après un coup pour ne pas incrémenter en permanance
+							boolean vagueTerminee = true;
+							for(Case caseC: casesChemin){
+								if (!caseC.getListEnnemis().isEmpty()){
+									vagueTerminee = false;
+									break;
+
+								}
+								if(vagueTerminee) {
+									vague++;
+								}
+							}
+							or += 20;
 							caseChemin.getListEnnemis().remove(0);
 							
 						}
@@ -187,7 +172,12 @@ public class Plateau {
 	public void deplacerEnnemis(){
 		System.out.println(casesChemin);
 		for(int i = casesChemin.size()-1; i > 0; i--){
-			casesChemin.get(i).setListEnnemis(casesChemin.get(i-1).getListEnnemis());
+
+			for (Ennemi ennemi:casesChemin.get(i-1).getListEnnemis()) {
+				casesChemin.get(i).listEnnemis.add(ennemi);
+			}
+
+			casesChemin.get(i-1).listEnnemis.clear();
 		}
 		casesChemin.get(0).listEnnemis = new ArrayList<Ennemi>();
 		verifierArrive();

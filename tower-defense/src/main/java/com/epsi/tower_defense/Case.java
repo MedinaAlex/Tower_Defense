@@ -20,6 +20,8 @@ public class Case {
     
     /** Défini si la case est une arrivé */
     boolean arrive = false;
+
+
     
     /** la case suivante */
     Case suivante;

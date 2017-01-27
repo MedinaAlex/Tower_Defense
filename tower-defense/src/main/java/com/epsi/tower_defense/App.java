@@ -10,6 +10,6 @@ public class App {
 	public static void main(String[] args) throws IOException {
 		Plateau plateau = new Plateau("ressources/terrainTest.json");
 				
-		plateau.run();
+		//plateau.run();
 	}
 }
