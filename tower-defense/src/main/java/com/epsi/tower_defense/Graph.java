@@ -3,8 +3,10 @@ package com.epsi.tower_defense;
 /**
  * Created by Jacques on 10/01/2017.
  */
+import com.sun.javafx.tk.Toolkit;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javafx.event.EventHandler;
@@ -42,8 +44,8 @@ public class Graph extends Application {
         private static final String CROISEMENT3 = "/Users/richard/Documents/travail/cours/algoRil16/atelierIA/assets/TN_1.png";
         private static final String END = "/Users/richard/Documents/travail/cours/algoRil16/atelierIA/assets/EN_1.png";*/
         private static final String CHEMIN = "C:\\Users\\Jacques\\Documents\\GitHub\\Tower_Defense\\tower-defense\\ressources\\img";
-    Image imageChemin = new Image("file:ressources\\img\\tour.png");
-        final ImageCursor cursorNew = ImageCursor.chooseBestCursor(new Image[]{imageChemin}, 0,0);
+   // Image imageChemin = new Image("file:ressources\\img\\tour.png");
+        //final ImageCursor cursorNew = ImageCursor.chooseBestCursor(new Image[]{imageChemin}, 0,0);
         private  Plateau plateau;
         int MAX;
         Stage stage;
@@ -75,14 +77,17 @@ public class Graph extends Application {
         root.getChildren().add( canvas );
             */
            stage = primaryStage;
-           // stage.setFullScreen(true);
+            stage.getIcons().setAll(new Image("file:ressources\\img\\Tour\\tour2.png"));
+                    // stage.setFullScreen(true);
              plateau = new Plateau("ressources/terrainTest.json");
              MAX =(int)(Math.sqrt(plateau.terrain.size() + plateau.casesChemin.size()))*100;
              Group root = new Group();
             Scene theScene = new Scene( root );
             stage.setScene( theScene );
              Canvas canvas = new Canvas (MAX,  MAX);
+            Canvas canvas2 = new Canvas (MAX,  MAX);
             final GraphicsContext gc = canvas.getGraphicsContext2D();
+            GraphicsContext gc2 = canvas2.getGraphicsContext2D();
             canvas.addEventHandler(MouseEvent.MOUSE_CLICKED,
                     new EventHandler<MouseEvent>() {
                         @Override
@@ -92,7 +97,16 @@ public class Graph extends Application {
                             onclic(coordoneeX, coordoneeY);
                         }
                     });
-            canvas.addEventHandler(MouseEvent.MOUSE_PRESSED,
+            canvas2.addEventHandler(MouseEvent.MOUSE_CLICKED,
+                    new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent t) {
+                            double coordoneeX = t.getSceneX();
+                            double coordoneeY = t.getSceneY();
+                            onclic(coordoneeX, coordoneeY);
+                        }
+                    });
+           /* canvas.addEventHandler(MouseEvent.MOUSE_PRESSED,
                     new EventHandler<MouseEvent>() {
                         @Override
                         public void handle(MouseEvent t) {
@@ -100,43 +114,132 @@ public class Graph extends Application {
                             double coordoneeY = t.getSceneY();
                             onSurvole(coordoneeX, coordoneeY, gc);
                         }
-                    });
+                    });*/
             final GridPane gridpane = new GridPane();
             // gridpane.setPadding(new Insets(5));
             gridpane.setHgap(10);
+
             gridpane.setVgap(10);
 
             final long startNanoTime = System.nanoTime();
             final Label or = new Label( Integer.toString(plateau.or)+" Or");
-            or.setFont(new Font(50));
-            or.setTextFill(Color.web("#FFD700"));
+            final Label gameOver = new Label( "Game Over");
+            final Label vague = new Label( "Vague: "+ plateau.vague);
 
+            List<String> test = javafx.scene.text.Font.getFamilies();
+
+            or.setFont(new Font(test.get(1),50));
+            or.setTextFill(Color.web("#FFD700"));
+            gameOver.setFont(new Font(test.get(11),90));
+            gameOver.setTextFill(Color.web("#F44336"));
 
             GridPane.setHalignment(or, HPos.CENTER);
-            gridpane.add(or, 3, 3);
+            gridpane.add(or,
+                    0, 0);
+
 
             root.getChildren().add(canvas);
+            root.getChildren().add(canvas2);
             root.getChildren().add(gridpane);
+            AffichageGraphyqueDecor  agd= new AffichageGraphyqueDecor(gc);
+            AffichageGraphyqueMouvement  agm= new AffichageGraphyqueMouvement(gc2);
+            //ag.run();
+            //Deplacement deplacement = new Deplacement();
+            //deplacement.run();
+
+            Thread T1 = new Thread(agd);
+            //Thread T2 = new Thread(deplacement);
+            Thread T3 = new Thread(agm);
+
+            T1.start();
+            //T2.start();
+            T3.start();
 
             new AnimationTimer()
             {
-                public void handle(long currentNanoTime)
+                public void handle(long now)
                 {
-                   // double t = (currentNanoTime - startNanoTime) / 100.0;
+                    if (plateau.pv <0){
+                        gridpane.add(gameOver, 6, 20);
 
 
-                    gc.clearRect(0, 0, MAX,MAX);
-                    affichage(gc);
-                    or.setText (Integer.toString(plateau.or)+" Or");
-
-
-                    Boolean test = run();
-                    try {
-
-                        TimeUnit.NANOSECONDS.sleep(5);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
                     }
+                    else {
+                        or.setText(Integer.toString(plateau.or) + " Or");
+                    }
+
+
+
+
+
+
+
+
+                        /*Platform.runLater(new Runnable() {
+                            @Override public void run() {
+                                affichage(gc);
+                            }
+                        });*/
+                        /*Task task = new Task() {
+                            @Override
+                            protected Object call() throws Exception {
+
+                                affichage(gc);
+                                try {
+
+                                    Thread.sleep(500);
+                                } catch (InterruptedException e) {
+                                    //e.printStackTrace();
+                                    System.out.print("test");
+                                }
+
+
+                                return null;
+                            }
+                        };
+                        Thread th = new Thread(task);
+                        th.();
+
+
+
+
+
+
+
+
+
+
+                            Task task2 = new Task() {
+                                @Override
+                                protected Object call() throws Exception {
+
+                                        plateau.deplacerEnnemis();
+                                        try {
+
+                                            Thread.sleep(50);
+                                        } catch (InterruptedException e) {
+                                            e.printStackTrace();
+                                        }
+
+
+                                    return null;
+                                }
+                            };
+                            Thread th2 = new Thread(task2);
+                            th2.start();
+
+
+
+
+
+                        //plateau.deplacerEnnemis();
+                        /*try {
+
+                            Thread.sleep(50);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }*/
 
                 }
 
@@ -145,20 +248,32 @@ public class Graph extends Application {
             timer.scheduleAtFixedRate(new TimerTask() {
                 @Override
                 public void run() {
-                    plateau.attaquer();
+                    if(plateau.pv <=0){
+
+                        gridpane.add(gameOver, 10, 3);
+                        gridpane.add(vague, 3, 10);
+                    }
+                    else {
+
+                        plateau.attaquer();
+                    }
+
                 }
             }, 0, 2000);
 
-            // run(primaryStage);
-           // fileSaveService.start();
 
-            //run();
             stage.show();
         }
 
+
+
+
+
+
+
     private void onSurvole(double coordoneeX, double coordoneeY, GraphicsContext gc) {
-        int caseX = (int) (coordoneeY/100);
-        int caseY = (int) (coordoneeX/100);
+        int caseX = (int) coordoneeY;
+        int caseY = (int) coordoneeX;
         for (Case caseTerrain : plateau.terrain) {
             if (caseTerrain.getX() == caseX && caseTerrain.getY()==caseY){
                     Circle circle = new Circle();
@@ -172,74 +287,80 @@ public class Graph extends Application {
         }
 
 
-    private void affichage(GraphicsContext gc)
+    private void affichageDecor(GraphicsContext gc) {
+
+
+
+        for (Case caseTerrain : plateau.terrain) {
+            Image imageTerrain;
+            if (caseTerrain.getTour() != null) {
+                Tour tour = caseTerrain.getTour();
+
+                if (caseTerrain.getTour().attaque) {
+                    imageTerrain = new Image("file:ressources\\img\\Tour\\tourTire" + String.valueOf(tour.niveau) + ".png");
+                    gc.drawImage(imageTerrain, caseTerrain.y, caseTerrain.x, inc, inc);
+                } else {
+                    imageTerrain = new Image("file:ressources\\img\\Tour\\tour" + String.valueOf(tour.niveau) + ".png");
+                    gc.drawImage(imageTerrain, caseTerrain.y, caseTerrain.x, inc, inc);
+                }
+
+            } else {
+
+                imageTerrain = new Image("file:ressources\\img\\terrain.png");
+                gc.drawImage(imageTerrain, caseTerrain.y, caseTerrain.x, inc, inc);
+
+            }
+
+        }
+        Image imageChemin;
+        for (Case caseChemin : plateau.getChemin()) {
+            imageChemin = new Image("file:ressources\\img\\chemin.png");
+            gc.drawImage(imageChemin, caseChemin.y, caseChemin.x, inc, inc);
+
+        }
+    }
+    private void affichageMouvement(GraphicsContext gc)
         {
-            for (Case caseTerrain: plateau.terrain){
-                if (caseTerrain.getTour() != null)
-                {
-                    Image imageChemin = new Image("file:ressources\\img\\tour.png");
-
-                    gc.drawImage(imageChemin, caseTerrain.y * inc, caseTerrain.x * inc  ,inc,inc);
-                }
-                else {
-
-                    Image imageChemin = new Image("file:ressources\\img\\terrain.png");
-                    gc.drawImage(imageChemin, caseTerrain.y * inc, caseTerrain.x * inc, inc, inc);
-                }
-            }
-            for (Case caseChemin: plateau.getChemin()){
-                imageChemin = new Image("file:ressources\\img\\chemin.png");
-                gc.drawImage(imageChemin, caseChemin.y * inc, caseChemin.x * inc  ,inc,inc);
-            }
+            gc.clearRect(0, 50, MAX, MAX);
+            Image imageEnnemni;
             for (Ennemi ennemi  :plateau.listEnnemi) {
-            imageChemin = new Image("file:ressources\\img\\Viking.png");
-                gc.drawImage(imageChemin, ennemi.coorY, ennemi.coorX -20,100,100 );
+                if (ennemi.vivant) {
+                    imageEnnemni = new Image("file:ressources\\img\\Viking"+ennemi.direction+"\\Viking"+String.valueOf(ennemi.sprite)+".png");
+                    gc.drawImage(imageEnnemni, ennemi.coorY, ennemi.coorX - 20, 100, 100);
+                }
             }
-            Image imageChemin = new Image("file:ressources\\img\\NextWave.png");
+            Image nextVague = new Image("file:ressources\\img\\NextWave.png");
 
 
-            gc.drawImage(imageChemin, 8 * inc, 0 * inc  ,200,100 );
+            gc.drawImage(nextVague, 800, 0, 100, 50);
+
 
         }
 
-   /* private void affichageGraphique() {
-        stage.setTitle("Tower defence");
-       // stage.setFullScreen(true);
-        Group root = new Group();
-        Canvas canvas = new Canvas (MAX,  MAX);
-        canvas.addEventHandler(MouseEvent.MOUSE_CLICKED,
-                new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent t) {
-                        double coordoneeX = t.getSceneX();
-                        double coordoneeY = t.getSceneY();
-                        onclic(coordoneeX, coordoneeY);
-                    }
-                });
-        GraphicsContext gc = canvas.getGraphicsContext2D();
-        drawShapes(gc, plateau.terrain);
-        Label or = new Label( Integer.toString(plateau.or)+" Or");
-        or.setFont(new Font(50));
-        or.setTextFill(Color.web("#FFD700"));
 
-        root.getChildren().add(canvas);
-        GridPane gridpane = new GridPane();
-       // gridpane.setPadding(new Insets(5));
-        gridpane.setHgap(10);
-        gridpane.setVgap(10);
-
-
-        GridPane.setHalignment(or, HPos.CENTER);
-        gridpane.add(or, 0, 0);
-
-        root.getChildren().add(gridpane);
-        stage.setScene(new Scene(root));
-        
-        //stage.show();
-    }*/
     private void onclic(double coordoneeX, double coordoneeY) {
-           if (coordoneeX >= 800 && coordoneeY <= 100){
-               nouvelleVague();
+        //TODO: modifier
+           if (coordoneeX >= 800 && coordoneeY <= 50){
+               //nouvelleVague();
+
+               Task task = new Task() {
+                   @Override
+                   protected Object call() throws Exception {
+                       for (int i=1; i<=plateau.vague; i++) {
+                           plateau.genererNouveauxEnnemis();
+                           try {
+
+                               Thread.sleep(1000);
+                           } catch (InterruptedException e) {
+                               e.printStackTrace();
+                           }
+                       }
+                       plateau.vague++;
+                       return null;
+                   }
+               };
+                   Thread th = new Thread(task);
+                    th.start();
            }
            else {
                onclicAddTour(coordoneeX,coordoneeY);
@@ -247,318 +368,157 @@ public class Graph extends Application {
 
     }
     private void onclicAddTour(double coordoneeX, double coordoneeY) {
-        int caseX = (int) (coordoneeY/100);
-        int caseY = (int) (coordoneeX/100);
+        int caseX = (int) coordoneeY/100;
+        int caseY = (int) coordoneeX/100;
         for (Case caseTerrain : plateau.terrain) {
-            if (caseTerrain.getX() == caseX && caseTerrain.getY()==caseY){
+            if (caseTerrain.getX() == caseX*100 && caseTerrain.getY()==caseY*100){
                 if (plateau.or >= 50 && caseTerrain.tour ==null) {
                     Tour tour = new Tour("tour1", 200, false, 30, 0, 1);
                     caseTerrain.setTour(tour);
                     plateau.or = plateau.or - 50;
                 }
+                else if (plateau.or >= 50 && caseTerrain.tour !=null && caseTerrain.tour.niveau == 1){
+                    Tour tour = caseTerrain.tour;
+                    plateau.or -= 50;
+                    tour.niveau = 2;
+                    tour.degat =75;
+                    tour.portee = 250;
+                }
             }
 
         }
-        //affichageGraphique();
+
+    }
+
+    static int inc = 100;
+
+
+    /**
+     * Lancement de la partie, va boucler jusqu'à ce que le plateau n'ai plus de vie
+     */
+    public  void nouvelleVague(){
+
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                plateau.genererNouveauxEnnemis();
+
+            }
+        }, 300, 5000);
+
     }
 
 
+    /*public class MonThread extends Thread {
+        GraphicsContext gc;
+        public  MonThread(GraphicsContext gc){
+            this.gc = gc;
+        }
 
-        static int inc = 100;
-       /* public  void drawShapes(GraphicsContext gc, ArrayList<Case> terrain) {
-            gc.setFill(Color.GRAY);
-            gc.setStroke(Color.GRAY);
+        @Override
 
-
-            for (int i = 0 ; i < MAX; i= i + inc ){
-                gc.strokeLine(i,0,i,MAX);
-            }
-            for (int i = 0 ; i < MAX; i= i + inc ){
-                gc.strokeLine(0,i,MAX,i);
-            }
-
-            for (Case caseTerrain: terrain){
+        public void run() {
+            for (Case caseTerrain: plateau.terrain){
                 if (caseTerrain.getTour() != null)
                 {
                     Image imageChemin = new Image("file:ressources\\img\\tour.png");
-                    gc.drawImage(imageChemin, caseTerrain.y * inc, caseTerrain.x * inc  ,inc,inc);
+
+                    gc.drawImage(imageChemin, caseTerrain.y , caseTerrain.x  ,inc,inc);
                 }
                 else {
 
                     Image imageChemin = new Image("file:ressources\\img\\terrain.png");
-                    gc.drawImage(imageChemin, caseTerrain.y * inc, caseTerrain.x * inc, inc, inc);
+                    gc.drawImage(imageChemin, caseTerrain.y , caseTerrain.x , inc, inc);
                 }
             }
             for (Case caseChemin: plateau.getChemin()){
-                Image imageChemin;
-                if(!caseChemin.getListEnnemis().isEmpty()){
-                     imageChemin = new Image("file:ressources\\img\\Viking.png");
+                imageChemin = new Image("file:ressources\\img\\chemin.png");
+                gc.drawImage(imageChemin, caseChemin.y , caseChemin.x  ,inc,inc);
+            }
+            for (Ennemi ennemi  :plateau.listEnnemi) {
+                if (ennemi.vivant) {
+                    imageChemin = new Image("file:ressources\\img\\Viking\\Viking"+String.valueOf(ennemi.sprite)+".png");
+                    gc.drawImage(imageChemin, ennemi.coorY, ennemi.coorX - 20, 100, 100);
                 }
-                else {
-                     imageChemin = new Image("file:ressources\\img\\chemin.png");
-                }
-
-
-
-                gc.drawImage(imageChemin, caseChemin.y * inc, caseChemin.x * inc  ,inc,inc);
             }
             Image imageChemin = new Image("file:ressources\\img\\NextWave.png");
 
 
             gc.drawImage(imageChemin, 8 * inc, 0 * inc  ,200,100 );
 
-            //String []tabDungeon = dungeon2.split("\n");
+        }
 
-            /*for (int i=0 ; i < tabDungeon.length ; i++){
-                String []tabcrt = tabDungeon[i].split(" ");
-                for (int c=0 ; c < tabcrt.length ; c ++){
-                    switch (tabcrt[c].charAt(0)) {
-                        case '-' :
-                            //ImageView imageView = new ImageView(image1);
-                            // imageView.setViewport(croppedPortion);
-                            // imageView.setFitWidth(inc);
-                            // imageView.setFitHeight(inc);
-                            gc.drawImage(image1, inc * c,inc*i ,inc,inc);
-                            break;
-                        case 't':
-                            gc.drawImage(image2, inc * c,inc*i ,inc,inc);
-                            break;
-                        case 'l':
-                            ImageView iv = new ImageView(image1);
-                            iv.setRotate(90);
-                            SnapshotParameters params = new SnapshotParameters();
-                            Image rotatedImage = iv.snapshot(params, null);
-                            gc.drawImage(rotatedImage, inc * c,inc*i ,inc,inc);
-                            break;
-                        case 'm':
-                            iv = new ImageView(image3);
-                            iv.setRotate(90);
-                            params = new SnapshotParameters();
-                            params.setFill(Color.TRANSPARENT);
-                            rotatedImage = iv.snapshot(params, null);
-                            gc.drawImage(rotatedImage, inc * c,inc*i ,inc,inc);
-                            break;
-                        case '+':
-                            iv = new ImageView(image5);
-                            iv.setRotate(-90);
-                            params = new SnapshotParameters();
-                            params.setFill(Color.TRANSPARENT);
-                            rotatedImage = iv.snapshot(params, null);
-                            gc.drawImage(rotatedImage, inc * c,inc*i ,inc,inc);
-                            break;
-                        case 'f':
-                            iv = new ImageView(image4);
-                            iv.setRotate(180);
-                            params = new SnapshotParameters();
-                            params.setFill(Color.TRANSPARENT);
-                            rotatedImage = iv.snapshot(params, null);
-                            gc.drawImage(rotatedImage, inc * c,inc*i ,inc,inc);
-                            break;
-                        case 'e':
-                            iv = new ImageView(image4);
-                            iv.setRotate(90);
-                            params = new SnapshotParameters();
-                            params.setFill(Color.TRANSPARENT);
-                            rotatedImage = iv.snapshot(params, null);
-                            gc.drawImage(rotatedImage, inc * c,inc*i ,inc,inc);
-                            break;
-                        case 'p':
-                            iv = new ImageView(image2);
-                            iv.setRotate(180);
-                            params = new SnapshotParameters();
-                            params.setFill(Color.TRANSPARENT);
-                            rotatedImage = iv.snapshot(params, null);
-                            gc.drawImage(rotatedImage, inc * c,inc*i ,inc,inc);
-                            break;
-                        case 'v':
-                            iv = new ImageView(image2);
-                            iv.setRotate(0);
-                            params = new SnapshotParameters();
-                            params.setFill(Color.TRANSPARENT);
-                            rotatedImage = iv.snapshot(params, null);
-                            gc.drawImage(rotatedImage, inc * c,inc*i ,inc,inc);
-                            break;
-                    }
-                }
-            }
-        }*/
+    }*/
 
-    /**
-     * Lancement de la partie, va boucler jusqu'à ce que le plateau n'ai plus de vie
-     */
-    public  void nouvelleVague(){
-        plateau.genererNouveauxEnnemis();
-    }
-     public Boolean run() {
+    class AffichageGraphyqueMouvement implements Runnable{
+        GraphicsContext gc;
+        public AffichageGraphyqueMouvement(GraphicsContext gc) {
+            this.gc=gc;
+        }
+        public void run(){
+                while (plateau.pv >0) {
 
-        boolean vagueTerminee = true;
-        //while(plateau.pv > 0 ){
-         //   vagueTerminee = true;
-            /*for(Case caseChemin: plateau.casesChemin){
-                if (!caseChemin.getListEnnemis().isEmpty()){
-                    vagueTerminee = false;
-                    break;
-
-                }
-            }
-
-            if(vagueTerminee){
-                plateau.vague++;
-                //TODO gestion des tours
-
-
-                //plateau.genererNouveauxEnnemis();z
-            }*/
-
-            /*new AnimationTimer() {
-                @Override public void handle(long currentNanoTime) {
-
-                    //root2.getChildren().removeAll();
-                    Label or = new Label( Integer.toString(plateau.or)+" fyugkhlk");
-                    or.setFont(new Font(50));
-                    or.setTextFill(Color.web("#FFFFFF"));
-                    GridPane gridpane = new GridPane();
-                    // gridpane.setPadding(new Insets(5));
-                    gridpane.setHgap(10);
-                    gridpane.setVgap(10);
-                    Group test = new Group();
-                    test.getChildren().add(gridpane);
-                    stage.getScene().setRoot(test);
-                   //stage.getScene() = new Scene(root2);
-
-
-
-                    //root.getChildren().add(gridpane);
-
-                    //stage.setScene(new Scene(root));
-
-
+                    Platform.runLater(new Runnable() {
+                                          @Override
+                                          public void run() {
+                                              plateau.deplacerEnnemis();
+                                              affichageMouvement(gc);
+                                          }
+                                      });
 
                     try {
-                        Thread.sleep(1);
-                    } catch (InterruptedException e) {
-                        // Do nothing
+
+                        Thread.sleep(100);
+                    } catch (Exception e) {
+                        System.out.println(" Error");
                     }
+
                 }
-            }.start();*/
-
-            /*try {
-                Thread.sleep(100 );
-            } catch (InterruptedException e) {
-                // Do nothing
-            }*/
-
-           //test();
-
-         /*try {
-
-             TimeUnit.NANOSECONDS.sleep(500);
-         } catch (InterruptedException e) {
-             e.printStackTrace();
-         }*/
-            plateau.deplacerEnnemis();
-         /*try {
-
-             TimeUnit.NANOSECONDS.sleep(500);
-         } catch (InterruptedException e) {
-             e.printStackTrace();
-         }*/
-
-        /* try {
-
-             TimeUnit.NANOSECONDS.sleep(500);
-         } catch (InterruptedException e) {
-             e.printStackTrace();
-         }*/
-
-       // }
-       // System.out.println("Vous avez perdu après " + plateau.vague + " tours");
-        return true;
-
+        }
     }
 
+    class AffichageGraphyqueDecor implements Runnable{
+        GraphicsContext gc;
+        public AffichageGraphyqueDecor(GraphicsContext gc) {
+            this.gc=gc;
+        }
+
+    public void run(){
+        while (plateau.pv >0) {
 
 
-    private void test() {
-        Runnable command = new Runnable() {
-        @Override
+            affichageDecor(gc);
+            try {
+                    /*int tempo = (int)(Math.random()*1000);
+                    System.out.println(message + " " + tempo);*/
+                Thread.sleep(300);
+            } catch (Exception e) {
+                System.out.println(" Error");
+            }
+
+
+        }
+    }
+}
+    class Deplacement implements Runnable{
+
+
         public void run() {
-           /* Group root = new Group();
+            while (plateau.pv > 0) {
+                plateau.deplacerEnnemis();
 
-            Canvas canvas = new Canvas (MAX,  MAX);
-            canvas.addEventHandler(MouseEvent.MOUSE_CLICKED,
-                    new EventHandler<MouseEvent>() {
-                        @Override
-                        public void handle(MouseEvent t) {
-                            double coordoneeX = t.getSceneX();
-                            double coordoneeY = t.getSceneY();
-                            onclic(coordoneeX, coordoneeY);
-                        }
-                    });
-            GraphicsContext gc = canvas.getGraphicsContext2D();
-            drawShapes(gc, plateau.terrain);
-            Label or = new Label( Integer.toString(plateau.or)+" Or");
-            or.setFont(new Font(50));
-            or.setTextFill(Color.web("#FFD700"));
-
-            root.getChildren().add(canvas);
-            GridPane gridpane = new GridPane();
-            // gridpane.setPadding(new Insets(5));
-            gridpane.setHgap(10);
-            gridpane.setVgap(10);
-
-
-            GridPane.setHalignment(or, HPos.CENTER);
-            gridpane.add(or, 0, 0);*/
-
-            //root.getChildren().get(gridpane);
-            Group root = (Group)stage.getScene().getRoot();
-            root.getChildren().removeAll();
-            Label or = new Label( Integer.toString(plateau.or)+" Or");
-            or.setFont(new Font(50));
-            or.setTextFill(Color.web("#FFFFFF"));
-            GridPane gridpane = new GridPane();
-            // gridpane.setPadding(new Insets(5));
-            gridpane.setHgap(10);
-            gridpane.setVgap(10);
-
-
-            GridPane.setHalignment(or, HPos.CENTER);
-            gridpane.add(or, 0, 0);
-
-            root.getChildren().add(gridpane);
-
-            //stage.setScene(new Scene(root));
-
-
-        }
-        };
-        command.run();
-       /* try {
-            command.wait(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
-    }
-
-
-    /*Service<Void> fileSaveService = new Service<Void>(){
-
-        @Override
-        protected Task<Void> createTask() {
-            return new Task<Void>(){
-
-                @Override
-                protected Void call() throws Exception {
-                    // Sauvegarder le fichier ici.
-
-                    return null;
+                try {
+                   /* int tempo = (int)(Math.random()*1000);
+                    System.out.println(message + " " + tempo);*/
+                    Thread.sleep(200);
+                } catch (Exception e) {
+                    System.out.println(" Error");
                 }
-            };
+            }
         }
-    };*/
 
 
-
+    }
 }
 

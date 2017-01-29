@@ -19,6 +19,8 @@ public class Tour {
     
     /** son niveau */
     int niveau;
+
+    boolean attaque = false;
     
     /**
      * Constructeur d'une tour

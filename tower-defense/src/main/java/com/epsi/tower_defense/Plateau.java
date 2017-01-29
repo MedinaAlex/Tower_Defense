@@ -1,5 +1,7 @@
 package com.epsi.tower_defense;
 
+import com.sun.xml.internal.bind.v2.TODO;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -36,6 +38,8 @@ public class Plateau {
 
 	/** Quantitée d'or */
 	int or = 100;
+
+
 	
 	/**
 	 * Constructeur du plateau qui prend en paramètre le chemin vers le fichier correspondant au terrain
@@ -43,7 +47,7 @@ public class Plateau {
 	 */
 	public Plateau(String path) {
 
-		this.pv = 100;
+		this.pv = 1;
 		//lecture du fichier texte	
 		try{
 			InputStream ips=new FileInputStream(path); 
@@ -61,32 +65,30 @@ public class Plateau {
 			int x =0 , y = 0;
 			
 			for(char s: map.toCharArray()){
-				
+				int tailleCase = 100;
 				Case c;
 				switch (s) {
 					case 'x':
-						c= new Case(x,y,false,false,false,false, 'x');
+						c= new Case(x*tailleCase,y*tailleCase,false,false,false,false, 'x');
 						casesChemin.add(c);
 						break;
 
 					case '3':
-						c = new Case(x,y,true, true, false, true, 'D');
+						c = new Case(x*tailleCase,y*tailleCase,true, true, false, true, 'D');
 						casesChemin.add(c);
 						break;
 						
 					case '4':
-						c = new Case(x,y,true, false, true, false, 'x');
+						c = new Case(x*tailleCase,y*tailleCase,true, false, true, true, 'x');
 						casesChemin.add(c);
 						break;
 					case '0':
-						c = new Case(x,y,false, false, false, false, 'x');
+						c = new Case(x*tailleCase,y*tailleCase,false, false, false, false, 'x');
 						terrain.add(c);
 						break;
-						
-
 					default:
 
-						c = new Case(x,y,true, false, false,true, s);
+						c = new Case(x*tailleCase,y*tailleCase,true, false, false,true, s);
 						casesChemin.add(c);
 						break;
 				}
@@ -111,11 +113,13 @@ public class Plateau {
 	 * Génère de nouveaux ennemis et les ajoutes au plateau
 	 */
 	public void genererNouveauxEnnemis(){
-		for(int i =0; i<vague; i++) {
+
 			Case caseDepart = casesChemin.get(0);
-			Ennemi ennemi = new Ennemi("bob" +i, 1, 30 + vague, 20, 10,caseDepart.x*100 , caseDepart.y*100, caseDepart.direction);
+
+			//TODO: géréer l'affichage hors cadfre en fonction de l'emplacement de la fenêtre
+			Ennemi ennemi = new Ennemi("bob", 1, 30 + vague, 20, 10,caseDepart.x , caseDepart.y-100, caseDepart.direction);
 			listEnnemi.add(ennemi);
-		}
+
 	}
 	
 	/**
@@ -127,21 +131,25 @@ public class Plateau {
 		for (Case caseTerrain:terrain) {
 			if(caseTerrain.getTour() != null){
 				Tour tour = caseTerrain.getTour();
+				tour.attaque = false;
 				int nombreTire = 1;
-				int coorTourX = (caseTerrain.getX() * 100);
-				int coorToury = (caseTerrain.getY() * 100);
+				int coorTourX = caseTerrain.getX() ;
+				int coorTourY = caseTerrain.getY();
 
 				for (Ennemi ennemi:listEnnemi) {
 
-					if (nombreTire == 1) {
+					if (!tour.attaque && ennemi.vivant == true) {
 
 						//savoir si les coordonnées de l'ennemi sont dans le cercle
 						//racine_carre((x_point - x_centre)² + (y_centre - y_point)) < rayon
-						if ((Math.sqrt((Math.pow((ennemi.coorX - coorTourX), 2)) + (Math.pow((coorTourX - ennemi.coorX), 2)))) < tour.getPortee()) {
+						if ((Math.sqrt((Math.pow((ennemi.coorX - coorTourX), 2)) + (Math.pow((coorTourY - ennemi.coorY), 2)))) < tour.getPortee()) {
 							nombreTire++;
 							ennemi.pv = ennemi.pv - tour.degat;
+							tour.attaque=true;
 							if (ennemi.pv < 0) {
-								listEnnemi.remove(ennemi);
+
+								ennemi.vivant = false;
+								or += ennemi.prix;
 							}
 						}
 					}
@@ -199,49 +207,58 @@ public class Plateau {
 	public void deplacerEnnemis(){
 		char direction = 'x';
 		for (Ennemi ennemi :listEnnemi) {
-			direction = ennemi.direction;
-			for (Case caseC : casesChemin) {
+			if(ennemi.vivant) {
 
-				//on verrifie que la case sur la quels est l'ennemi n'éguille pas
-				if (caseC.aiguilleur && (caseC.getX() * 100 == ennemi.coorX && caseC.getY() * 100 == ennemi.coorY)) {
-					direction = caseC.direction;
+
+				direction = ennemi.direction;
+				for (Case caseC : casesChemin) {
+
+					//on verrifie que la case sur la quels est l'ennemi n'éguille pas
+					if (caseC.aiguilleur && (caseC.getX() == ennemi.coorX && caseC.getY() == ennemi.coorY)) {
+						//si c'est la base
+						if (caseC.arrive) {
+							ennemi.vivant = false;
+							pv = pv - ennemi.degat;
+						} else {
+							direction = caseC.direction;
+						}
+
+
+					}
 
 
 				}
-
-
 			}
 
 			switch (direction) {
 				case 'H':
-					ennemi.coorX--;
+					ennemi.coorX += 4;
 					break;
 				case 'B':
-					ennemi.coorX++;
+					ennemi.coorX += 4;
 					break;
 				case 'D':
-					ennemi.coorY++;
+					ennemi.coorY +=4;
 					break;
 				case 'G':
-					ennemi.coorY--;
+					ennemi.coorY +=4;
 					break;
 			}
 			ennemi.direction = direction;
+			if (ennemi.sprite <4){
+				ennemi.sprite++;
+			}
+			else{
+				ennemi.sprite = 1;
+			}
+
 		}
 
 		//casesChemin.get(0).listEnnemis = new ArrayList<Ennemi>();
-		verifierArrive();
+
 	}
-	
-	/** 
-	 * Faire perdre des pv au plateau si un ennemi est arrivé à la fin du chemin
-	 */
-	public void verifierArrive(){
-		Case arrive = casesChemin.get(casesChemin.size()-1);
-		for(Ennemi e: arrive.listEnnemis){
-			this.pv -= e.degat;
-		}
-	}
+
+
 
 	/**
 	 * permet de trier le chemin
@@ -288,8 +305,8 @@ public class Plateau {
 		ArrayList<Case> cheminVoisins = new ArrayList<>();
 		
 		for(Case actuelle : casesChemin){
-			if ((actuelle.getX() == x && (actuelle.getY() == y-1 || actuelle.getY() == y+1)) 
-			 || (actuelle.getY() == y && (actuelle.getX() == x-1 || actuelle.getX() == x+1)))
+			if ((actuelle.getX() == x && (actuelle.getY() == y-100 || actuelle.getY() == y+100))
+			 || (actuelle.getY() == y && (actuelle.getX() == x-100 || actuelle.getX() == x+100)))
 			{
 				cheminVoisins.add(actuelle);
 			}

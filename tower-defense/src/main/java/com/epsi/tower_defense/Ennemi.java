@@ -23,6 +23,10 @@ public class Ennemi {
     int coorX = 0;
     int coorY = 0;
 
+    Boolean vivant = true;
+
+    int sprite = 1;
+
     char direction;
 
     /**
