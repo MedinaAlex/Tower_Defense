@@ -1,6 +1,8 @@
 .class
 /.idea/
 .iml
+.metadata/
+.recommenders/
 
 tower-defense/.idea/misc.xml
 
