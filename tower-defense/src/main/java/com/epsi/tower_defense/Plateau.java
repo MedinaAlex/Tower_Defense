@@ -34,7 +34,7 @@ public class Plateau {
 	int pv;
 	
 	/** numéro de vague */
-	int vague = 1;
+	int vague = 0;
 
 	/** Quantitée d'or */
 	int or = 100;
@@ -117,7 +117,7 @@ public class Plateau {
 			Case caseDepart = casesChemin.get(0);
 
 			//TODO: géréer l'affichage hors cadfre en fonction de l'emplacement de la fenêtre
-			Ennemi ennemi = new Ennemi("bob", 1, 30 + vague, 20, 10,caseDepart.x , caseDepart.y-100, caseDepart.direction);
+			Ennemi ennemi = new Ennemi("bob", 1, 30 + vague*5, 20, 10,caseDepart.x , caseDepart.y-100, caseDepart.direction);
 			listEnnemi.add(ennemi);
 
 	}
@@ -125,18 +125,18 @@ public class Plateau {
 	/**
 	 * Permet aux tours d'attaquer un ennemi à portée
 	 */
-	public void attaquer(){
+	public void attaquer() {
 
 
-		for (Case caseTerrain:terrain) {
-			if(caseTerrain.getTour() != null){
+		for (Case caseTerrain : terrain) {
+			if (caseTerrain.getTour() != null) {
 				Tour tour = caseTerrain.getTour();
 				tour.attaque = false;
 				int nombreTire = 1;
-				int coorTourX = caseTerrain.getX() ;
+				int coorTourX = caseTerrain.getX();
 				int coorTourY = caseTerrain.getY();
 
-				for (Ennemi ennemi:listEnnemi) {
+				for (Ennemi ennemi : listEnnemi) {
 
 					if (!tour.attaque && ennemi.vivant == true) {
 
@@ -145,7 +145,7 @@ public class Plateau {
 						if ((Math.sqrt((Math.pow((ennemi.coorX - coorTourX), 2)) + (Math.pow((coorTourY - ennemi.coorY), 2)))) < tour.getPortee()) {
 							nombreTire++;
 							ennemi.pv = ennemi.pv - tour.degat;
-							tour.attaque=true;
+							tour.attaque = true;
 							if (ennemi.pv < 0) {
 
 								ennemi.vivant = false;
@@ -158,48 +158,8 @@ public class Plateau {
 			}
 
 		}
-		/*ArrayList<Case> reverse =  (ArrayList<Case>) casesChemin.clone();
-		Collections.reverse(reverse);
-		
-		for(Case actuelle: terrain){
-			if(actuelle.getTour() != null){
-				Tour tour = actuelle.getTour();
-				int portee = tour.getPortee();
-				
-				for(Case caseChemin : reverse){
-					int xMoins = actuelle.getX() - portee;
-					int yMoins = actuelle.getY() - portee;
-					int xPlus = actuelle.getX() + portee;
-					int yPlus = actuelle.getY() + portee;
-										
-					if ((caseChemin.getX() > xMoins &&  caseChemin.getX() < xPlus) 
-					 && (caseChemin.getY() > yMoins &&  caseChemin.getY() < yPlus)
-					 && (!caseChemin.getListEnnemis().isEmpty())){
-						System.out.println(caseChemin.getListEnnemis().get(0).pv);
-						
-						if(caseChemin.getListEnnemis().get(0).perdrePV(tour.getDegat())){
-
-							//On vérifie si la vague est terminer uniquement après un coup pour ne pas incrémenter en permanance
-							boolean vagueTerminee = true;
-							for(Case caseC: casesChemin){
-								if (!caseC.getListEnnemis().isEmpty()){
-									vagueTerminee = false;
-									break;
-
-								}
-								if(vagueTerminee) {
-									vague++;
-								}
-							}
-							or += 20;
-							caseChemin.getListEnnemis().remove(0);
-							
-						}
-					}
-				}
-			}
-		}*/
 	}
+
 	
 	/**
 	 * Déplace tous les ennemis d'une case

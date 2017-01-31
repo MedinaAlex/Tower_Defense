@@ -21,6 +21,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.media.Media;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import javafx.scene.shape.Circle;
@@ -30,6 +31,7 @@ import sun.awt.image.GifImageDecoder;
 
 //import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.net.URL;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -39,43 +41,24 @@ import static javafx.scene.Cursor.cursor;
 
 
 public class Graph extends Application {
-        /*private static final String IMAGECOULOIR = "/Users/richard/Documents/travail/cours/algoRil16/atelierIA/assets/IN_1.png";
-        private static final String VIRAGEDROITBAS = "/Users/richard/Documents/travail/cours/algoRil16/atelierIA/assets/LN_1.png";
-        private static final String CROISEMENT3 = "/Users/richard/Documents/travail/cours/algoRil16/atelierIA/assets/TN_1.png";
-        private static final String END = "/Users/richard/Documents/travail/cours/algoRil16/atelierIA/assets/EN_1.png";*/
-        private static final String CHEMIN = "C:\\Users\\Jacques\\Documents\\GitHub\\Tower_Defense\\tower-defense\\ressources\\img";
-   // Image imageChemin = new Image("file:ressources\\img\\tour.png");
-        //final ImageCursor cursorNew = ImageCursor.chooseBestCursor(new Image[]{imageChemin}, 0,0);
+
         private  Plateau plateau;
         int MAX;
         Stage stage;
 
-        /*final Image image2 = new Image("file:"+VIRAGEDROITBAS);
-        final Image image3 = new Image("file:"+CROISEMENT3);
-        final Image image4 = new Image("file:"+END);
-        final Image image5 = new Image("file:"+ARR);*/
 
        public static void main(String[] args) {
 
            Application.launch(Graph.class, args);
 
-           /*creerPlateau();
 
-           Plateau plateau = new Plateau("ressources/terrainTest.json");
-
-           plateau.run();*/
         }
         @Override
         public void start(Stage primaryStage) {
 
-           /*
-           Group root = new Group();
-        Scene theScene = new Scene( root );
-        theStage.setScene( theScene );
 
-        Canvas canvas = new Canvas( 512 - 64, 256 );
-        root.getChildren().add( canvas );
-            */
+            //final File file = new File("file:ressources\\Musique\\proftim.mp3");
+           // final Media media = new Media(file.toURI().toString());
            stage = primaryStage;
             stage.getIcons().setAll(new Image("file:ressources\\img\\Tour\\tour2.png"));
                     // stage.setFullScreen(true);
@@ -106,15 +89,7 @@ public class Graph extends Application {
                             onclic(coordoneeX, coordoneeY);
                         }
                     });
-           /* canvas.addEventHandler(MouseEvent.MOUSE_PRESSED,
-                    new EventHandler<MouseEvent>() {
-                        @Override
-                        public void handle(MouseEvent t) {
-                            double coordoneeX = t.getSceneX();
-                            double coordoneeY = t.getSceneY();
-                            onSurvole(coordoneeX, coordoneeY, gc);
-                        }
-                    });*/
+
             final GridPane gridpane = new GridPane();
             // gridpane.setPadding(new Insets(5));
             gridpane.setHgap(10);
@@ -132,10 +107,14 @@ public class Graph extends Application {
             or.setTextFill(Color.web("#FFD700"));
             gameOver.setFont(new Font(test.get(11),90));
             gameOver.setTextFill(Color.web("#F44336"));
+            vague.setFont(new Font(test.get(11),50));
+            vague.setTextFill(Color.web("#F44336"));
 
             GridPane.setHalignment(or, HPos.CENTER);
             gridpane.add(or,
                     0, 0);
+            gridpane.add(vague,
+                    20, 0);
 
 
             root.getChildren().add(canvas);
@@ -143,16 +122,14 @@ public class Graph extends Application {
             root.getChildren().add(gridpane);
             AffichageGraphyqueDecor  agd= new AffichageGraphyqueDecor(gc);
             AffichageGraphyqueMouvement  agm= new AffichageGraphyqueMouvement(gc2);
-            //ag.run();
-            //Deplacement deplacement = new Deplacement();
-            //deplacement.run();
+
 
             Thread T1 = new Thread(agd);
             //Thread T2 = new Thread(deplacement);
             Thread T3 = new Thread(agm);
 
             T1.start();
-            //T2.start();
+
             T3.start();
 
             new AnimationTimer()
@@ -166,80 +143,9 @@ public class Graph extends Application {
                     }
                     else {
                         or.setText(Integer.toString(plateau.or) + " Or");
+                        vague.setText( "Vague "+Integer.toString(plateau.vague) );
                     }
 
-
-
-
-
-
-
-
-                        /*Platform.runLater(new Runnable() {
-                            @Override public void run() {
-                                affichage(gc);
-                            }
-                        });*/
-                        /*Task task = new Task() {
-                            @Override
-                            protected Object call() throws Exception {
-
-                                affichage(gc);
-                                try {
-
-                                    Thread.sleep(500);
-                                } catch (InterruptedException e) {
-                                    //e.printStackTrace();
-                                    System.out.print("test");
-                                }
-
-
-                                return null;
-                            }
-                        };
-                        Thread th = new Thread(task);
-                        th.();
-
-
-
-
-
-
-
-
-
-
-                            Task task2 = new Task() {
-                                @Override
-                                protected Object call() throws Exception {
-
-                                        plateau.deplacerEnnemis();
-                                        try {
-
-                                            Thread.sleep(50);
-                                        } catch (InterruptedException e) {
-                                            e.printStackTrace();
-                                        }
-
-
-                                    return null;
-                                }
-                            };
-                            Thread th2 = new Thread(task2);
-                            th2.start();
-
-
-
-
-
-                        //plateau.deplacerEnnemis();
-                        /*try {
-
-                            Thread.sleep(50);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }*/
 
                 }
 
@@ -265,26 +171,6 @@ public class Graph extends Application {
             stage.show();
         }
 
-
-
-
-
-
-
-    private void onSurvole(double coordoneeX, double coordoneeY, GraphicsContext gc) {
-        int caseX = (int) coordoneeY;
-        int caseY = (int) coordoneeX;
-        for (Case caseTerrain : plateau.terrain) {
-            if (caseTerrain.getX() == caseX && caseTerrain.getY()==caseY){
-                    Circle circle = new Circle();
-                    circle.setCenterX(caseTerrain.getX()*100 +50);
-                    circle.setCenterY(caseTerrain.getY()*100 +50);
-                    circle.setRadius(caseTerrain.getTour().portee);
-                   // gc.fillOval(caseTerrain.getX()*100 +50, caseTerrain.getY()*100 +50, caseTerrain.getTour().portee , 300 );
-                gc.fillOval(30,30,30,30);
-                }
-            }
-        }
 
 
     private void affichageDecor(GraphicsContext gc) {
@@ -346,7 +232,7 @@ public class Graph extends Application {
                Task task = new Task() {
                    @Override
                    protected Object call() throws Exception {
-                       for (int i=1; i<=plateau.vague; i++) {
+                       for (int i=0; i<=plateau.vague; i++) {
                            plateau.genererNouveauxEnnemis();
                            try {
 
@@ -410,46 +296,7 @@ public class Graph extends Application {
     }
 
 
-    /*public class MonThread extends Thread {
-        GraphicsContext gc;
-        public  MonThread(GraphicsContext gc){
-            this.gc = gc;
-        }
 
-        @Override
-
-        public void run() {
-            for (Case caseTerrain: plateau.terrain){
-                if (caseTerrain.getTour() != null)
-                {
-                    Image imageChemin = new Image("file:ressources\\img\\tour.png");
-
-                    gc.drawImage(imageChemin, caseTerrain.y , caseTerrain.x  ,inc,inc);
-                }
-                else {
-
-                    Image imageChemin = new Image("file:ressources\\img\\terrain.png");
-                    gc.drawImage(imageChemin, caseTerrain.y , caseTerrain.x , inc, inc);
-                }
-            }
-            for (Case caseChemin: plateau.getChemin()){
-                imageChemin = new Image("file:ressources\\img\\chemin.png");
-                gc.drawImage(imageChemin, caseChemin.y , caseChemin.x  ,inc,inc);
-            }
-            for (Ennemi ennemi  :plateau.listEnnemi) {
-                if (ennemi.vivant) {
-                    imageChemin = new Image("file:ressources\\img\\Viking\\Viking"+String.valueOf(ennemi.sprite)+".png");
-                    gc.drawImage(imageChemin, ennemi.coorY, ennemi.coorX - 20, 100, 100);
-                }
-            }
-            Image imageChemin = new Image("file:ressources\\img\\NextWave.png");
-
-
-            gc.drawImage(imageChemin, 8 * inc, 0 * inc  ,200,100 );
-
-        }
-
-    }*/
 
     class AffichageGraphyqueMouvement implements Runnable{
         GraphicsContext gc;
@@ -509,8 +356,7 @@ public class Graph extends Application {
                 plateau.deplacerEnnemis();
 
                 try {
-                   /* int tempo = (int)(Math.random()*1000);
-                    System.out.println(message + " " + tempo);*/
+
                     Thread.sleep(200);
                 } catch (Exception e) {
                     System.out.println(" Error");
