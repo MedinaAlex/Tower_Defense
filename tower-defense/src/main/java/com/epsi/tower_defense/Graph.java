@@ -1,43 +1,26 @@
 package com.epsi.tower_defense;
 
-/**
- * Created by Jacques on 10/01/2017.
- */
-import com.sun.javafx.tk.Toolkit;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
-import javafx.scene.*;
-
-
+import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.media.Media;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.ArcType;
-import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import sun.awt.image.GifImageDecoder;
-
-//import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.net.URL;
-import java.util.*;
-import java.util.concurrent.TimeUnit;
-
-import static java.awt.image.ImageObserver.WIDTH;
-import static javafx.scene.Cursor.cursor;
 
 
 public class Graph extends Application {
@@ -62,7 +45,7 @@ public class Graph extends Application {
            stage = primaryStage;
             stage.getIcons().setAll(new Image("file:ressources\\img\\Tour\\tour2.png"));
                     // stage.setFullScreen(true);
-             plateau = new Plateau("ressources/terrainTest.json");
+             plateau = new Plateau("ressources/terrainTest.txt");
              MAX =(int)(Math.sqrt(plateau.terrain.size() + plateau.casesChemin.size()))*100;
              Group root = new Group();
             Scene theScene = new Scene( root );
@@ -100,6 +83,7 @@ public class Graph extends Application {
             final Label or = new Label( Integer.toString(plateau.or)+" Or");
             final Label gameOver = new Label( "Game Over");
             final Label vague = new Label( "Vague: "+ plateau.vague);
+            final Label pv = new Label( "pv: "+ plateau.pv);
 
             List<String> test = javafx.scene.text.Font.getFamilies();
 
@@ -109,6 +93,8 @@ public class Graph extends Application {
             gameOver.setTextFill(Color.web("#F44336"));
             vague.setFont(new Font(test.get(11),50));
             vague.setTextFill(Color.web("#F44336"));
+            pv.setFont(new Font(test.get(90),1));
+            pv.setTextFill(Color.web("#F44336"));
 
             GridPane.setHalignment(or, HPos.CENTER);
             gridpane.add(or,
@@ -158,6 +144,7 @@ public class Graph extends Application {
 
                         gridpane.add(gameOver, 10, 3);
                         gridpane.add(vague, 3, 10);
+                        gridpane.add(pv, 40, 3);
                     }
                     else {
 
@@ -210,7 +197,7 @@ public class Graph extends Application {
             gc.clearRect(0, 50, MAX, MAX);
             Image imageEnnemni;
             for (Ennemi ennemi  :plateau.listEnnemi) {
-                if (ennemi.vivant) {
+                if (ennemi.getVivant()) {
                     imageEnnemni = new Image("file:ressources\\img\\Viking"+ennemi.direction+"\\Viking"+String.valueOf(ennemi.sprite)+".png");
                     gc.drawImage(imageEnnemni, ennemi.coorY, ennemi.coorX - 20, 100, 100);
                 }
@@ -225,7 +212,6 @@ public class Graph extends Application {
 
 
     private void onclic(double coordoneeX, double coordoneeY) {
-        //TODO: modifier
            if (coordoneeX >= 800 && coordoneeY <= 50){
                //nouvelleVague();
 
@@ -246,7 +232,7 @@ public class Graph extends Application {
                    }
                };
                    Thread th = new Thread(task);
-                    th.start();
+                   th.start();
            }
            else {
                onclicAddTour(coordoneeX,coordoneeY);
@@ -271,9 +257,7 @@ public class Graph extends Application {
                     tour.portee = 250;
                 }
             }
-
         }
-
     }
 
     static int inc = 100;
@@ -346,6 +330,12 @@ public class Graph extends Application {
 
 
         }
+        try {
+			Thread.sleep(Long.MAX_VALUE);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 }
     class Deplacement implements Runnable{
@@ -363,8 +353,6 @@ public class Graph extends Application {
                 }
             }
         }
-
-
     }
 }
 

@@ -5,25 +5,20 @@ package com.epsi.tower_defense;
  *
  */
 public class Ennemi {
-	/** Le nom */
-    String nom;
-    
-    /** la vitesse */
-    int vitesse;
     
     /** les pv */
-    int pv;
+    private int pv;
     
     /** les dégats */
-    int degat;
+    private int degat;
     
     /** l'argent gagné lorsque l'ennemi est tué */
-    int prix;
+    private int prix;
 
     int coorX = 0;
     int coorY = 0;
 
-    Boolean vivant = true;
+    private Boolean vivant = true;
 
     int sprite = 1;
 
@@ -37,9 +32,8 @@ public class Ennemi {
      * @param degat ses degats
      * @param prix son prix
      */
-    public Ennemi (String nom, int vitesse, int pv, int degat, int prix, int coorX, int coorY, char direction){
-        this.nom = nom;
-        this.vitesse = vitesse;
+    public Ennemi ( int pv, int degat, int prix, int coorX, int coorY, char direction){
+
         this.pv = pv;
         this.degat = degat;
         this.prix = prix;
@@ -58,7 +52,56 @@ public class Ennemi {
      */
     public Boolean perdrePV(int degat){
     	this.pv -= degat;
+    	if(pv <= 0){
+    		vivant = false;
+    	}
     	return pv <= 0;
     }
+
+	public int getPv() {
+		return pv;
+	}
+
+
+	public int getDegat() {
+		return degat;
+	}
+
+
+	public int getPrix() {
+		return prix;
+	}
+
+
+	public int getCoorX() {
+		return coorX;
+	}
+
+
+	public int getCoorY() {
+		return coorY;
+	}
+
+
+	public Boolean getVivant() {
+		return vivant;
+	}
+	
+	public void setVivant(Boolean vivant){
+		this.vivant = vivant;
+	}
+
+
+	public int getSprite() {
+		return sprite;
+	}
+
+
+	public char getDirection() {
+		return direction;
+	}
+    
+    
+    
       
 }

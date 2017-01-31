@@ -1,18 +1,10 @@
 package com.epsi.tower_defense;
 
-import com.sun.xml.internal.bind.v2.TODO;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.sql.Time;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Timer;
-import java.util.concurrent.TimeUnit;
-
-import javax.swing.plaf.SliderUI;
 
 /**
  * Classe Plateau
@@ -47,7 +39,7 @@ public class Plateau {
 	 */
 	public Plateau(String path) {
 
-		this.pv = 1;
+		this.pv = 100;
 		//lecture du fichier texte	
 		try{
 			InputStream ips=new FileInputStream(path); 
@@ -116,8 +108,8 @@ public class Plateau {
 
 			Case caseDepart = casesChemin.get(0);
 
-			//TODO: géréer l'affichage hors cadfre en fonction de l'emplacement de la fenêtre
-			Ennemi ennemi = new Ennemi("bob", 1, 30 + vague*5, 20, 10,caseDepart.x , caseDepart.y-100, caseDepart.direction);
+			
+			Ennemi ennemi = new Ennemi(30 + vague*5, 20, 10,caseDepart.x , caseDepart.y-100, caseDepart.direction);
 			listEnnemi.add(ennemi);
 
 	}
@@ -132,24 +124,25 @@ public class Plateau {
 			if (caseTerrain.getTour() != null) {
 				Tour tour = caseTerrain.getTour();
 				tour.attaque = false;
-				int nombreTire = 1;
 				int coorTourX = caseTerrain.getX();
 				int coorTourY = caseTerrain.getY();
 
 				for (Ennemi ennemi : listEnnemi) {
 
-					if (!tour.attaque && ennemi.vivant == true) {
+					if (!tour.attaque && ennemi.getVivant()) {
 
 						//savoir si les coordonnées de l'ennemi sont dans le cercle
 						//racine_carre((x_point - x_centre)² + (y_centre - y_point)) < rayon
-						if ((Math.sqrt((Math.pow((ennemi.coorX - coorTourX), 2)) + (Math.pow((coorTourY - ennemi.coorY), 2)))) < tour.getPortee()) {
-							nombreTire++;
-							ennemi.pv = ennemi.pv - tour.degat;
+						if ((Math.sqrt((Math.pow((ennemi.getCoorX() - coorTourX), 2)) + (Math.pow((coorTourY - ennemi.getCoorY()), 2)))) < tour.getPortee()) {
+							
+							
+							
 							tour.attaque = true;
-							if (ennemi.pv < 0) {
+							if(ennemi.perdrePV(tour.degat))
+							{
 
-								ennemi.vivant = false;
-								or += ennemi.prix;
+								
+								or += ennemi.getPrix();
 							}
 						}
 					}
@@ -167,18 +160,18 @@ public class Plateau {
 	public void deplacerEnnemis(){
 		char direction = 'x';
 		for (Ennemi ennemi :listEnnemi) {
-			if(ennemi.vivant) {
+			if(ennemi.getVivant()) {
 
 
-				direction = ennemi.direction;
+				direction = ennemi.getDirection();
 				for (Case caseC : casesChemin) {
 
 					//on verrifie que la case sur la quels est l'ennemi n'éguille pas
-					if (caseC.aiguilleur && (caseC.getX() == ennemi.coorX && caseC.getY() == ennemi.coorY)) {
+					if (caseC.aiguilleur && (caseC.getX() == ennemi.getCoorX() && caseC.getY() == ennemi.getCoorY())) {
 						//si c'est la base
 						if (caseC.arrive) {
-							ennemi.vivant = false;
-							pv = pv - ennemi.degat;
+							ennemi.setVivant(false);
+							pv = pv - ennemi.getDegat();
 						} else {
 							direction = caseC.direction;
 						}
